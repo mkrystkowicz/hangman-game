@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "parcel-bundler": "^1.12.4"
+    "autoprefixer": "^10.0.1",
+    "parcel-bundler": "^1.12.4",
+    "postcss-modules": "^3.2.2",
+    "posthtml": "^0.13.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.12.1"
+    "@babel/preset-env": "^7.12.1",
+    "posthtml-img-autosize": "^0.1.6"
   },
   "browserslist": [
     "defaults",
@@ -18,8 +22,8 @@
     "maintained node versions"
   ],
   "scripts": {
-    "dev": "parcel index.html",
-    "prod": "parcel build index.html"
+    "dev": "parcel src/index.html",
+    "prod": "parcel build src/index.html ../build/output"
   },
   "repository": {
     "type": "git",
