@@ -1,0 +1,35 @@
+{
+  "name": "hangman-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "not IE_Mob 11",
+    "maintained node versions"
+  ],
+  "scripts": {
+    "dev": "parcel index.html",
+    "prod": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkrystkowicz/hangman-game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkrystkowicz/hangman-game/issues"
+  },
+  "homepage": "https://github.com/mkrystkowicz/hangman-game#readme"
+}
