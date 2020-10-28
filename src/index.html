@@ -9,6 +9,1963 @@
     <link rel="mask-icon" href="/assets/hangman-icon.svg" color="#ff8a01" />
   </head>
   <body>
+    <section class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <img src="./assets/hangman-logo.svg" alt="hangman-logo" />
+        </div>
+        <div class="header__game-options">
+          <button class="game-start-btn btn">play game</button>
+          <button class="info-btn btn">how to play</button>
+        </div>
+      </div>
+    </section>
+    <section class="game">
+      <div class="game__header">
+        <div class="logo-container">
+          <img src="./assets/hangman-logo.svg" alt="hangman-logo" />
+        </div>
+      </div>
+      <div class="game__container">
+        <div class="hangman">
+          <svg
+            width="165"
+            height="231"
+            viewBox="0 0 165 231"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="hangman">
+              <g id="gallows-legs">
+                <g id="Group 1">
+                  <path
+                    id="Vector 2"
+                    d="M2.32333 216.501L27.1741 162.372L26.6314 200.615L17.1401 220.487C14.9556 225.061 11.5355 229.981 6.46776 229.902C3.75314 229.859 2.10344 228.349 1.16887 226.427C-0.353573 223.297 0.870971 219.665 2.32333 216.501Z"
+                    fill="#6C3807"
+                    stroke="black"
+                    stroke-width="0.5"
+                  />
+                  <path
+                    id="Vector 30"
+                    d="M2 221C2 224.195 4.4 229.577 8 227.559"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 33"
+                    d="M3 217C5.35236 215.729 10.4099 211.409 11.8214 204.293C13.5856 195.398 17.5553 206.834 15.3499 211.494"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 31"
+                    d="M11 227C11 225.174 9.8 222.099 8 223.252"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 32"
+                    d="M15 223C15 221.174 9.8 218.099 2 219.252"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 34"
+                    d="M14 208C12.5778 209.507 10.338 213.396 12.9333 215.396C16.1333 217.861 10.2667 218.272 6 217.861"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 35"
+                    d="M17.6343 200.165C17.073 202.395 16.4263 208.064 18.1933 210.748C20.3721 214.056 17.1489 215.002 14.6938 214.681"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 36"
+                    d="M12 197.5C13.8333 197.833 17.6 197.9 18 195.5M20.5 198.5C20.8333 199.167 21.3 201.1 20.5 203.5M19.5 190C18.6667 188.833 17.3 186.3 18.5 185.5M20 195C20.5 195.667 21.6 195.9 22 191.5M24 174C22.6667 177.333 20.5 185.1 22.5 189.5M23.5 196C23.6667 199.833 23.1 207.7 19.5 208.5"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    id="Ellipse 1"
+                    cx="8.5"
+                    cy="207.5"
+                    r="0.75"
+                    stroke="#46280B"
+                    stroke-width="0.5"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    id="Ellipse 4"
+                    cx="16.5"
+                    cy="192.5"
+                    r="0.5"
+                    fill="#46280B"
+                  />
+                  <circle
+                    id="Ellipse 2"
+                    cx="11.5"
+                    cy="216.5"
+                    r="0.75"
+                    stroke="#46280B"
+                    stroke-width="0.5"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    id="Ellipse 3"
+                    cx="4.5"
+                    cy="222.5"
+                    r="0.5"
+                    fill="#46280B"
+                  />
+                </g>
+                <g id="Group 2">
+                  <path
+                    id="Vector 2_2"
+                    d="M66.8508 216.501L42 162.372L42.5427 200.615L52.0341 220.487C54.2185 225.061 57.6386 229.981 62.7064 229.902C65.421 229.859 67.0707 228.349 68.0053 226.427C69.5277 223.297 68.3032 219.665 66.8508 216.501Z"
+                    fill="#6C3807"
+                    stroke="black"
+                    stroke-width="0.5"
+                  />
+                  <path
+                    id="Vector 30_2"
+                    d="M67.1741 221C67.1741 224.195 64.7741 229.577 61.1741 227.559"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 33_2"
+                    d="M66.1741 217C63.8218 215.729 58.7642 211.409 57.3528 204.293C55.5885 195.398 51.6189 206.834 53.8242 211.494"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 31_2"
+                    d="M58.1741 227C58.1741 225.174 59.3741 222.099 61.1741 223.252"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 32_2"
+                    d="M54.1741 223C54.1741 221.174 59.3741 218.099 67.1741 219.252"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 34_2"
+                    d="M55.1741 208C56.5964 209.507 58.8361 213.396 56.2408 215.396C53.0408 217.861 58.9075 218.272 63.1741 217.861"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 35_2"
+                    d="M51.5398 200.165C52.1012 202.395 52.7478 208.064 50.9808 210.748C48.8021 214.056 52.0252 215.002 54.4803 214.681"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 36_2"
+                    d="M57.1741 197.5C55.3408 197.833 51.5741 197.9 51.1741 195.5M48.6741 198.5C48.3408 199.167 47.8741 201.1 48.6741 203.5M49.6741 190C50.5075 188.833 51.8741 186.3 50.6741 185.5M49.1741 195C48.6741 195.667 47.5741 195.9 47.1741 191.5M45.1741 174C46.5075 177.333 48.6741 185.1 46.6741 189.5M45.6741 196C45.5075 199.833 46.0741 207.7 49.6741 208.5"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    id="Ellipse 1_2"
+                    r="0.75"
+                    transform="matrix(-1 0 0 1 60.6741 207.5)"
+                    stroke="#46280B"
+                    stroke-width="0.5"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    id="Ellipse 4_2"
+                    r="0.5"
+                    transform="matrix(-1 0 0 1 52.6741 192.5)"
+                    fill="#46280B"
+                  />
+                  <circle
+                    id="Ellipse 2_2"
+                    r="0.75"
+                    transform="matrix(-1 0 0 1 57.6741 216.5)"
+                    stroke="#46280B"
+                    stroke-width="0.5"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    id="Ellipse 3_2"
+                    r="0.5"
+                    transform="matrix(-1 0 0 1 64.6741 222.5)"
+                    fill="#46280B"
+                  />
+                </g>
+              </g>
+              <g id="pillar">
+                <rect
+                  id="Rectangle 7"
+                  x="0.353553"
+                  y="-2.98023e-08"
+                  width="10.9791"
+                  height="87.5061"
+                  rx="5.48953"
+                  transform="matrix(0.707107 0.707107 0.707107 -0.707107 27.9222 76.7983)"
+                  fill="#6C3807"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 92"
+                  d="M89.7957 18.1121C91.2953 18.0533 94.4205 19.2295 94.3724 21.1794"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 93"
+                  d="M52.1497 54.9522C53.2441 55.2986 55.8625 56.9816 56.3339 58.4119"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 94"
+                  d="M57.6714 60.1234C56.1717 60.1822 53.0466 59.006 53.0947 57.0561"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 95"
+                  d="M39.2134 79.4834C38.1189 79.1369 35.5006 77.4539 35.0292 76.0236"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 96"
+                  d="M81.9178 31.7489C82.8932 31.9744 84.7053 33.0867 84.3433 34.0432"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 97"
+                  d="M49.5915 62.2492C50.7397 62.8679 53.1382 64.7722 53.11 65.6751"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 98"
+                  d="M65.5493 46.4867C64.5739 46.2612 62.7618 45.1488 63.1238 44.1924"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 99"
+                  d="M41.1911 71.048C40.4107 70.6275 38.7806 69.3332 38.7997 68.7196"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 100"
+                  d="M88.1681 18.717C88.1592 19.9902 87.3945 22.7568 84.4072 23.6375C80.6731 24.7385 87.0319 26.6373 88.6679 25.3799"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 101"
+                  d="M51.0134 56.7736C51.3378 57.7134 51.4914 59.5618 49.5099 59.4368C47.033 59.2805 52.2321 62.339 53.1158 61.834"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 102"
+                  d="M59.299 59.5186C59.3079 58.2454 60.0726 55.4788 63.0599 54.598C66.794 53.4971 60.4351 51.5982 58.7991 52.8556"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 103"
+                  d="M40.2605 79.459C39.936 78.5192 39.7824 76.6708 41.7639 76.7958C44.2408 76.9521 39.0417 73.8936 38.158 74.3986"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 104"
+                  d="M78.3074 31.7517C78.0856 32.3801 77.1237 33.619 75.0512 33.5476C72.4606 33.4584 76.2316 35.4772 77.4982 35.1328"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 105"
+                  d="M69.1596 46.4838C69.3815 45.8555 70.3434 44.6166 72.4159 44.6879C75.0065 44.7771 71.2355 42.7584 69.9689 43.1027"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 106"
+                  d="M45.1728 71.8759C45.1736 71.4686 45.5632 70.802 47.1153 71.3937C49.0555 72.1333 45.7401 69.6589 44.8924 69.5844"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 107"
+                  d="M94.8592 22.7836C94.0023 22.8172 92.2593 22.2362 92.351 21.2586"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 108"
+                  d="M57.0221 61.5226C56.3967 61.3247 54.9558 60.4415 54.7695 59.742"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 109"
+                  d="M53.0556 54.1347C53.9125 54.1011 55.6555 54.6822 55.5638 55.6597"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 110"
+                  d="M34.2517 74.7099C34.8771 74.9079 36.318 75.7911 36.5043 76.4906"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 111"
+                  d="M83.1118 34.5385C82.5545 34.4097 81.5311 33.8263 81.7561 33.3583"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 112"
+                  d="M51.9588 65.7433C51.3026 65.3897 49.9653 64.3631 50.0311 63.9396"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 113"
+                  d="M64.3553 43.697C64.9126 43.8259 65.936 44.4092 65.711 44.8772"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 114"
+                  d="M39.8879 69.0662C40.334 69.3066 41.2434 70.0046 41.1986 70.2926"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 115"
+                  d="M93.9809 24.9824C93.1239 25.016 90.382 22.3097 88.9753 18.1442"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 116"
+                  d="M56.9438 62.9213C56.3184 62.7233 53.5858 60.0078 51.4617 56.5596"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 117"
+                  d="M53.4862 53.2531C54.3432 53.2195 57.0851 55.9258 58.4918 60.0913"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 118"
+                  d="M34.33 73.3113C34.9554 73.5092 37.688 76.2248 39.8121 79.6729"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 119"
+                  d="M82.8874 36.5667C82.33 36.4379 81.0244 34.6336 80.8259 32.3341"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 120"
+                  d="M52.4904 67.8656C51.8342 67.5121 49.7224 65.0481 48.6266 62.4686"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 121"
+                  d="M64.5797 41.6688C65.1371 41.7977 66.4427 43.6019 66.6412 45.9014"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 122"
+                  d="M39.5266 67.6238C39.9726 67.864 41.4079 69.5387 42.1526 71.2918"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 123"
+                  d="M86.6912 24.7269C87.0431 23.9436 88.3094 22.682 89.8959 24.0242C91.8521 25.6791 90.5798 22.5545 89.3215 20.2951"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 124"
+                  d="M51.4832 60.8368C51.54 60.3486 52.1489 59.7444 53.6719 61.1501C55.5498 62.8833 53.7958 60.2403 52.2772 58.2412"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 125"
+                  d="M60.7759 53.5086C60.424 54.292 59.1577 55.5535 57.5712 54.2113C55.615 52.5565 56.8873 55.6811 58.1456 57.9405"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 126"
+                  d="M39.7906 75.3958C39.7339 75.884 39.1249 76.4882 37.6019 75.0825C35.724 73.3493 37.478 75.9922 38.9966 77.9913"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 127"
+                  d="M77.8238 35.6173C78.1833 35.2895 79.2126 34.8803 80.0061 35.8136C80.9844 36.9644 80.6958 35.2026 80.2693 33.8713"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 128"
+                  d="M45.2982 64.117C45.5642 63.8977 46.5283 63.846 47.7493 65.1657C49.2547 66.7929 48.2665 64.7643 47.2927 63.1516"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 129"
+                  d="M69.6433 42.6182C69.2838 42.946 68.2545 43.3552 67.461 42.4219C66.4827 41.2711 66.7713 43.0329 67.1978 44.3642"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 130"
+                  d="M43.8006 69.0395C43.6198 69.1886 42.9645 69.2237 42.1347 68.3268C41.1116 67.2209 41.7832 68.5996 42.445 69.6956"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 131"
+                  d="M83.9215 26.802C84.828 26.4627 87.3273 26.0149 89.028 26.9044C91.1248 28.0011 90.7638 26.2713 89.9999 24.9727"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 132"
+                  d="M49.9733 61.6521C50.5559 61.6367 52.2889 61.9552 53.7786 63.0557C55.6154 64.4125 54.8984 63.0385 53.9955 61.879"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 133"
+                  d="M63.5456 51.4336C62.6391 51.7728 60.1397 52.2206 58.4391 51.3311C56.3423 50.2344 56.7033 51.9643 57.4672 53.2628"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 134"
+                  d="M39.9524 73.5171C39.3699 73.5325 37.6368 73.2139 36.1471 72.1135C34.3103 70.7567 35.0273 72.1307 35.9302 73.2902"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 135"
+                  d="M76.6363 36.886C77.2774 36.872 78.9623 37.0747 79.906 37.8034C81.0697 38.7019 81.1309 37.7849 80.8596 37.0128"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 136"
+                  d="M45.8065 65.8216C46.4992 66.0516 48.4112 66.917 49.7175 68.0715C51.3282 69.4949 51.044 68.5199 50.4532 67.5755"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 137"
+                  d="M70.8308 41.3496C70.1897 41.3635 68.5048 41.1608 67.5611 40.4321C66.3974 39.5336 66.3362 40.4507 66.6075 41.2227"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 138"
+                  d="M82.335 25.4918C82.9493 26.4597 83.9213 28.4598 82.8948 28.7164M84.9271 29.9896C85.3232 30.1544 86.3471 30.3668 87.2737 29.8976M80.6881 29.6145C79.9324 29.1932 78.4022 28.5137 78.3264 29.166M83.1596 29.7883C83.5973 30.0417 83.9816 30.6218 82.0164 30.9152M74.3027 32.2997C75.5341 31.5299 78.6381 30.2359 81.2026 31.2177M84.503 31.6295C86.3437 31.6475 89.8942 31.2018 89.3706 29.2744"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 139"
+                  d="M65.132 52.7438C64.5178 51.7758 63.5458 49.7758 64.5723 49.5191M62.54 48.246C62.1439 48.0811 61.1199 47.8687 60.1933 48.3379M66.779 48.621C67.5347 49.0423 69.0649 49.7219 69.1407 49.0696M64.3075 48.4473C63.8697 48.1939 63.4855 47.6137 65.4507 47.3203M73.1644 45.9359C71.933 46.7056 68.829 47.9996 66.2645 47.0178M62.9641 46.606C61.1234 46.588 57.5729 47.0337 58.0964 48.9612"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 140"
+                  d="M42.8151 75.9626C42.1089 75.0866 40.8696 73.3538 41.5624 73.4308M39.7275 71.9603C39.3915 71.7353 38.5786 71.3119 38.015 71.4181M42.9618 73.3401C43.6305 73.8483 44.9396 74.7491 44.826 74.2861M41.0878 72.5689C40.698 72.2675 40.2628 71.7383 41.6407 72.0322M46.9887 73.0135C46.2776 73.2629 44.3171 73.4133 42.1642 72.02M39.6149 70.8571C38.2482 70.3651 35.7368 69.7717 36.6254 71.3341"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 141"
+                  d="M75.1798 35.1321C75.4133 35.7509 75.7159 36.9815 75.0581 36.9526M76.1062 37.9652C76.3223 38.1179 76.9116 38.3979 77.5394 38.2966M73.5945 37.0764C73.1973 36.7278 72.3683 36.1151 72.2293 36.4527M75.0653 37.5705C75.294 37.7774 75.4437 38.151 74.2126 37.9896M69.3469 37.4809C70.202 37.2678 72.2652 37.0772 73.6769 38.0198M75.6153 38.7761C76.7267 39.0844 78.9389 39.4212 78.8973 38.3024"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 142"
+                  d="M44.1055 65.7555C44.4392 66.2741 44.9831 67.2634 44.4888 67.071M45.5276 68.0928C45.7273 68.262 46.2362 68.6224 46.6743 68.7106M43.4379 66.782C43.0534 66.4208 42.2807 65.7518 42.2656 65.9655M44.6548 67.5301C44.8779 67.7427 45.0857 68.058 44.1328 67.6184M40.4 65.9768C40.9774 66.0415 42.4545 66.4369 43.7443 67.5015M45.3753 68.5652C46.2778 69.0823 48.0024 69.9068 47.6807 69.0681"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Vector 143"
+                  d="M72.2873 43.1035C72.0537 42.4846 71.7512 41.2541 72.409 41.2829M71.3609 40.2703C71.1447 40.1176 70.5555 39.8376 69.9277 39.939M73.8726 41.1591C74.2697 41.5077 75.0987 42.1205 75.2378 41.7829M72.4018 40.665C72.1731 40.4581 72.0234 40.0846 73.2545 40.246M78.1202 40.7547C77.2651 40.9678 75.2019 41.1584 73.7902 40.2157M71.8517 39.4595C70.7404 39.1512 68.5282 38.8143 68.5698 39.9331"
+                  stroke="#46280B"
+                  stroke-width="0.1"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Ellipse 17"
+                  d="M49.9457 58.3928C50.0137 58.4892 50.0532 58.577 50.0498 58.6373C50.0464 58.6959 49.9977 58.7459 49.8415 58.6965C49.6853 58.6471 49.5178 58.5285 49.4061 58.4335C49.2912 58.3358 49.1942 58.2298 49.1262 58.1334C49.0582 58.0369 49.0187 57.9492 49.0222 57.8889C49.0255 57.8303 49.0742 57.7802 49.2304 57.8297C49.3866 57.8791 49.5542 57.9976 49.6658 58.0927C49.7807 58.1904 49.8778 58.2964 49.9457 58.3928Z"
+                  stroke="#46280B"
+                  stroke-width="0.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Ellipse 18"
+                  d="M90.5406 23.2234C90.645 23.4453 90.6041 23.7218 90.2874 23.7342C89.9707 23.7467 89.676 23.4833 89.5717 23.2613C89.4674 23.0394 89.5083 22.7628 89.8249 22.7504C90.1416 22.738 90.4363 23.0014 90.5406 23.2234Z"
+                  stroke="#46280B"
+                  stroke-width="0.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Ellipse 19"
+                  d="M56.9265 55.0122C56.8221 54.7902 56.863 54.5137 57.1797 54.5013C57.4964 54.4889 57.7911 54.7523 57.8954 54.9742C57.9997 55.1962 57.9588 55.4727 57.6422 55.4851C57.3255 55.4975 57.0308 55.2341 56.9265 55.0122Z"
+                  stroke="#46280B"
+                  stroke-width="0.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Ellipse 20"
+                  d="M79.9814 32.3705C80.032 32.5894 79.8955 32.7258 79.6766 32.6752C79.4577 32.6246 79.2392 32.4061 79.1886 32.1872C79.1379 31.9682 79.2744 31.8318 79.4933 31.8824C79.7122 31.933 79.9307 32.1515 79.9814 32.3705Z"
+                  stroke="#46280B"
+                  stroke-width="0.5"
+                  stroke-linecap="round"
+                />
+                <circle
+                  id="Ellipse 21"
+                  r="0.454418"
+                  transform="matrix(0.474345 0.880339 0.880339 0.474345 47.2544 61.9337)"
+                  stroke="#46280B"
+                  stroke-width="0.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Ellipse 22"
+                  d="M67.4857 45.8651C67.4351 45.6461 67.5716 45.5097 67.7905 45.5603C68.0094 45.6109 68.2279 45.8294 68.2785 46.0483C68.3292 46.2673 68.1927 46.4037 67.9738 46.3531C67.7549 46.3025 67.5363 46.084 67.4857 45.8651Z"
+                  stroke="#46280B"
+                  stroke-width="0.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  id="Ellipse 23"
+                  d="M42.7431 71.471C42.6412 71.282 42.7119 71.2113 42.9009 71.3132C43.09 71.415 43.3258 71.6509 43.4277 71.8399C43.5296 72.029 43.4589 72.0997 43.2698 71.9978C43.0808 71.8959 42.8449 71.6601 42.7431 71.471Z"
+                  stroke="#46280B"
+                  stroke-width="0.5"
+                  stroke-linecap="round"
+                />
+                <ellipse
+                  id="Ellipse 24"
+                  rx="0.293541"
+                  ry="0.234844"
+                  transform="matrix(0.425383 0.905014 0.999233 -0.0391486 93.152 24.7443)"
+                  fill="#46280B"
+                />
+              </g>
+              <g id="stem">
+                <rect
+                  id="Rectangle 7_2"
+                  x="-0.25"
+                  y="0.25"
+                  width="17.5"
+                  height="220.5"
+                  rx="8.75"
+                  transform="matrix(-1 0 0 1 42.6741 9)"
+                  fill="#6C3807"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <g id="Group 5">
+                  <rect
+                    id="Rectangle 1"
+                    x="-0.25"
+                    y="0.25"
+                    width="17.5"
+                    height="220.5"
+                    rx="8.75"
+                    transform="matrix(-1 0 0 1 42.6741 9)"
+                    fill="#6C3807"
+                    stroke="black"
+                    stroke-width="0.5"
+                  />
+                  <path
+                    id="Vector 37"
+                    d="M39.8026 223.703C38.2049 226.47 33.4355 229.931 31.3269 226.383"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 65"
+                    d="M40.6962 91.4398C39.0985 92.768 34.3291 94.429 32.2205 92.7262"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 51"
+                    d="M28.8397 92.0622C30.4374 89.2949 35.2067 85.8342 37.3154 89.382"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 66"
+                    d="M27.8397 24.9095C29.4374 23.5814 34.2067 21.9204 36.3154 23.6232"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 44"
+                    d="M33.4171 185.5C32.0856 186.832 28.8429 188.074 28.1838 185.733"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 67"
+                    d="M35.4418 73.9402C33.4826 74.8805 28.7116 75.7579 27.7418 74.1047"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 52"
+                    d="M35.2252 130.265C36.5567 128.934 39.7994 127.691 40.4585 130.032"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 68"
+                    d="M35 43.4C36.3315 42.7609 39.5741 42.1646 40.2333 43.2882"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 38"
+                    d="M40.9365 219.739C39.5347 217.462 37.3149 211.192 39.6506 204.324C42.5703 195.738 33.4142 203.658 32.9944 208.795"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 69"
+                    d="M39.9365 86.1879C38.5347 85.0952 36.3149 82.0857 38.6506 78.7892C41.5703 74.6686 32.4142 78.4696 31.9944 80.9355"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 53"
+                    d="M27.7058 96.0263C29.1076 98.3029 31.3274 104.573 28.9917 111.442C26.072 120.027 35.2281 112.108 35.6479 106.97"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 70"
+                    d="M26.7058 26.8121C28.1076 27.9048 30.3274 30.9142 27.9917 34.2107C25.072 38.3313 34.2281 34.5304 34.6479 32.0645"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 45"
+                    d="M37.4171 179.084C36.9663 177.574 36.6592 173.667 39.0363 170.113C42.0077 165.672 35.588 168.783 34.5654 171.644"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 54"
+                    d="M31.2252 136.681C31.676 138.191 31.9831 142.099 29.606 145.652C26.6346 150.094 33.0543 146.982 34.0769 144.122"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 72"
+                    d="M29.6672 49C30.1179 49.7246 30.425 51.6001 28.0479 53.3056C25.0765 55.4374 31.4962 53.944 32.5188 52.5712"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 39"
+                    d="M29.0083 224.399C29.9213 222.818 32.4982 220.755 33.4804 222.654"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 73"
+                    d="M28.0083 88.4246C28.9213 87.6656 31.4982 86.6754 32.4804 87.5867"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 55"
+                    d="M40.5981 94.5C39.6851 96.0813 37.1082 98.1446 36.126 96.2458"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 74"
+                    d="M38.634 24.5754C37.721 25.3344 35.1441 26.3246 34.1619 25.4133"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 46"
+                    d="M29 182.667C29.7609 181.906 31.5423 181.125 31.8119 182.355"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 75"
+                    d="M28.9427 71.9393C30.0622 71.402 32.6834 70.8502 33.0799 71.7192"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 56"
+                    d="M39.6423 133.099C38.8814 133.859 37.1 134.641 36.8304 133.41"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 76"
+                    d="M38.6423 44.6049C37.8814 44.9701 36.1 45.3451 35.8304 44.7545"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 40"
+                    d="M27.5442 218.935C28.4572 217.354 34.4982 217.291 40.6765 222.189"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 77"
+                    d="M26.5442 85.8021C27.4572 85.0431 33.4982 85.0128 39.6765 87.3639"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 57"
+                    d="M41.0981 96.8301C40.1851 98.4114 34.1441 98.4747 27.9658 93.576"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 78"
+                    d="M40.0981 27.1979C39.1851 27.9569 33.1441 27.9872 26.9658 25.6361"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 47"
+                    d="M27 178.667C27.7609 177.906 31.2091 178.791 33.9788 182.522"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 79"
+                    d="M26 69.1147C27.1195 68.5774 32.1931 69.2026 36.2683 71.8372"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 58"
+                    d="M41.6423 137.099C40.8814 137.859 37.4332 136.974 34.6635 133.243"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 80"
+                    d="M40.6423 46.5247C39.8814 46.8899 36.4332 46.4649 33.6635 44.6743"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 41"
+                    d="M35.9103 206.445C36.3886 208.461 36.3834 212.949 33.1361 213.383C29.1321 213.918 34.0074 217.207 37.9079 218.985"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 81"
+                    d="M34.9103 79.8073C35.3886 80.7748 35.3834 82.9292 32.1361 83.1374C28.1321 83.3942 33.0074 84.9728 36.9079 85.8259"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 59"
+                    d="M32.732 109.32C32.2536 107.305 32.2589 102.816 35.5062 102.382C39.5102 101.847 34.6349 98.558 30.7344 96.7805"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 82"
+                    d="M31.732 33.1927C31.2536 32.2252 31.2589 30.0708 34.5062 29.8626C38.5102 29.6058 33.6349 28.0272 29.7344 27.1741"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 48"
+                    d="M33.6672 171.361C33.632 172.582 32.9444 175.136 31.0298 174.888C28.6691 174.582 30.9425 177.197 32.8916 178.804"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 83"
+                    d="M38.1311 63C38.0794 63.8618 37.0677 65.6655 34.2506 65.4902C30.7771 65.274 34.1221 67.1212 36.99 68.2559"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 60"
+                    d="M34.9751 144.404C35.0103 143.183 35.6979 140.629 37.6125 140.878C39.9732 141.184 37.6998 138.568 35.7507 136.961"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 84"
+                    d="M34.3336 51.5999C34.3687 51.0141 35.0563 49.7883 36.9709 49.9074C39.3317 50.0544 37.0582 48.7989 35.1091 48.0278"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 42"
+                    d="M36.6804 197.842C36.0515 200.054 33.7768 205.287 30.9049 206.728C27.3638 208.504 29.6822 210.934 31.9691 211.884"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 85"
+                    d="M35.6804 75.6785C35.0515 76.7401 32.7768 79.2518 29.9049 79.9431C26.3638 80.7954 28.6822 81.962 30.9691 82.4176"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 61"
+                    d="M31.9618 117.923C32.5907 115.711 34.8655 110.478 37.7374 109.038C41.2785 107.262 38.9601 104.831 36.6732 103.882"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 86"
+                    d="M33.6357 36.8159C34.2646 35.7543 36.5393 33.2426 39.4113 32.5514C42.9523 31.699 40.6339 30.5324 38.3471 30.0768"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 49"
+                    d="M33.5772 167C32.8819 168.163 30.7889 170.795 28.9345 171.177C26.648 171.648 27.5969 173.385 28.7538 174.274"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 87"
+                    d="M35.6774 60.8758C34.6543 61.6972 31.5748 63.5558 28.8463 63.8254C25.482 64.1579 26.8782 65.3846 28.5805 66.0125"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 62"
+                    d="M35.0651 148.765C35.7604 147.602 37.8534 144.97 39.7078 144.588C41.9943 144.118 41.0454 142.381 39.8885 141.491"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 43"
+                    d="M39.8923 197.352C38.1379 196.724 34.8426 194.898 35.6962 192.62M32.0311 193.968C31.4091 194.378 30.0383 195.819 29.5311 198.298M37.1471 187.106C38.4521 186.513 40.9024 185.002 40.2631 183.709M34.2141 191.187C33.4478 191.514 32.3785 191.166 34.232 187.155M41.25 171C40.738 174.553 38.7311 182.363 34.799 185.173M30.683 190.303C28.622 193.539 25.1794 200.635 27.8971 203.128"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 63"
+                    d="M28.75 118.414C30.5044 119.042 33.7997 120.867 32.9462 123.146M36.6112 121.798C37.2332 121.387 38.604 119.946 39.1112 117.468M31.4952 128.659C30.1902 129.253 27.7399 130.763 28.3792 132.056M34.4282 124.579C35.1945 124.251 36.2638 124.599 34.4103 128.61M27.3923 144.765C27.9043 141.212 29.9112 133.402 33.8433 130.592M37.9593 125.463C40.0203 122.226 43.4629 115.13 40.7452 112.638"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 90"
+                    d="M27.75 37.557C29.5044 37.8584 32.7997 38.7346 31.9462 39.8281M35.6112 39.1811C36.2332 38.984 37.604 38.2924 38.1112 37.1029M30.4952 42.4741C29.1902 42.7591 26.7399 43.4841 27.3792 44.1046M33.4282 40.5159C34.1945 40.3588 35.2638 40.5257 33.4103 42.4506M26.3923 50.2044C26.9043 48.4989 28.9112 44.7508 32.8433 43.4019M36.9593 40.9401C39.0203 39.3868 42.4629 35.9811 39.7452 34.7846"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 50"
+                    d="M37.1368 167.528C36.1917 166.844 34.4918 165.196 35.2532 164.079M32.9683 164.142C32.5594 164.255 31.5955 164.804 31.0118 166.099M36.7388 161.261C37.5656 161.174 39.1643 160.79 38.9441 159.944M34.5601 162.995C34.077 163.034 33.4969 162.636 35.0409 160.737M41 153C40.2881 154.897 38.2118 158.899 35.6013 159.732M32.6135 161.831C31.0394 163.257 28.213 166.587 29.4997 168.5"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 91"
+                    d="M37.6368 57.9728C36.6917 57.6443 34.9918 56.8535 35.7532 56.3175M33.4683 56.3477C33.0594 56.4018 32.0955 56.6654 31.5118 57.2867M37.2388 54.9646C38.0656 54.9233 39.6643 54.739 39.4441 54.3328M35.0601 55.797C34.577 55.8156 33.9969 55.6248 35.5409 54.7132M41.5 51C40.7881 51.9104 38.7118 53.8311 36.1013 54.2309M33.1135 55.2384C31.5394 55.9227 28.713 57.521 29.9997 58.439"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 64"
+                    d="M31.5055 148.237C32.4506 148.921 34.1505 150.569 33.3891 151.686M35.6739 151.623C36.0829 151.51 37.0468 150.961 37.6305 149.667M31.9035 154.505C31.0767 154.591 29.478 154.975 29.6982 155.821M34.0822 152.77C34.5653 152.732 35.1454 153.129 33.6014 155.029M27.6423 162.765C28.3541 160.869 30.4305 156.867 33.041 156.034M36.0288 153.934C37.6029 152.509 40.4293 149.178 39.1426 147.266"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    id="Ellipse 5"
+                    r="0.75"
+                    transform="matrix(-0.866025 -0.5 -0.5 0.866025 40.9234 208.762)"
+                    stroke="#46280B"
+                    stroke-width="0.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Ellipse 12"
+                    d="M39.4811 81.287C39.3165 81.2414 39.1958 81.1655 39.1434 81.0718C39.0913 80.9784 39.1033 80.8541 39.2495 80.7326C39.3956 80.6112 39.6138 80.544 39.8085 80.519C40.0037 80.4939 40.201 80.5061 40.3656 80.5517C40.5303 80.5974 40.651 80.6732 40.7033 80.7669C40.7555 80.8604 40.7435 80.9847 40.5973 81.1061C40.4512 81.2276 40.233 81.2948 40.0383 81.3198C39.843 81.3449 39.6458 81.3327 39.4811 81.287Z"
+                    stroke="#46280B"
+                    stroke-width="0.5"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    id="Ellipse 6"
+                    r="0.5"
+                    transform="matrix(-0.866025 -0.5 -0.5 0.866025 41.4952 191.771)"
+                    fill="#46280B"
+                  />
+                  <circle
+                    id="Ellipse 7"
+                    r="0.75"
+                    transform="matrix(-0.866025 -0.5 -0.5 0.866025 33.8253 215.056)"
+                    stroke="#46280B"
+                    stroke-width="0.5"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    id="Ellipse 10"
+                    r="0.75"
+                    transform="matrix(0.866025 0.5 0.5 -0.866025 34.817 100.709)"
+                    stroke="#46280B"
+                    stroke-width="0.5"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    id="Ellipse 9"
+                    r="0.544649"
+                    transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 35.4167 180.417)"
+                    stroke="#46280B"
+                    stroke-width="0.5"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    id="Ellipse 15"
+                    r="0.590034"
+                    transform="matrix(-0.901541 -0.432693 -0.901541 0.432693 38.3839 70.3504)"
+                    stroke="#46280B"
+                    stroke-width="0.5"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    id="Ellipse 11"
+                    r="0.544649"
+                    transform="matrix(0.707107 0.707107 0.707107 -0.707107 33.2256 135.349)"
+                    stroke="#46280B"
+                    stroke-width="0.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Ellipse 16"
+                    d="M32.6593 45.4766C32.8989 45.5916 32.8989 45.778 32.6593 45.893C32.4198 46.008 32.0314 46.008 31.7919 45.893C31.5523 45.778 31.5523 45.5916 31.7919 45.4766C32.0314 45.3617 32.4198 45.3617 32.6593 45.4766Z"
+                    stroke="#46280B"
+                    stroke-width="0.5"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    id="Ellipse 8"
+                    r="0.5"
+                    transform="matrix(-0.866025 -0.5 -0.5 0.866025 28.7272 217.886)"
+                    fill="#46280B"
+                  />
+                </g>
+              </g>
+              <g id="line">
+                <rect
+                  id="Rectangle 3"
+                  x="-0.5"
+                  y="0.5"
+                  width="5"
+                  height="81"
+                  rx="2.5"
+                  transform="matrix(-1 0 0 1 138.174 15)"
+                  fill="#D5850D"
+                  stroke="black"
+                />
+                <path
+                  id="Vector 4"
+                  d="M139 18L134 19"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 12"
+                  d="M139 42L134 43"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 20"
+                  d="M139 66L134 67"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 8"
+                  d="M139 30L134 31"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 13"
+                  d="M139 54L134 55"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 21"
+                  d="M139 78L134 79"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 6"
+                  d="M139 24L134 25"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 14"
+                  d="M139 48L134 49"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 22"
+                  d="M139 72L134 73"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 9"
+                  d="M139 36L134 37"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 15"
+                  d="M139 60L134 61"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 23"
+                  d="M139 84L134 85"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 28"
+                  d="M139 90L134 91"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 5"
+                  d="M139 21L134 22"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 16"
+                  d="M139 45L134 46"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 24"
+                  d="M139 69L134 70"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 10"
+                  d="M139 33L134 34"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 17"
+                  d="M139 57L134 58"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 25"
+                  d="M139 81L134 82"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 7"
+                  d="M139 27L134 28"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 18"
+                  d="M139 51L134 52"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 26"
+                  d="M139 75L134 76"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 11"
+                  d="M139 39L134 40"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 19"
+                  d="M139 63L134 64"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 27"
+                  d="M139 87L134 88"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+                <path
+                  id="Vector 29"
+                  d="M139 93L134 94"
+                  stroke="black"
+                  stroke-width="0.5"
+                />
+              </g>
+              <g id="crossbeam">
+                <g id="Group 4">
+                  <rect
+                    id="Rectangle 7_3"
+                    x="0.25"
+                    y="0.25"
+                    width="17.1087"
+                    height="134.5"
+                    rx="8.55435"
+                    transform="matrix(-1.19249e-08 1 1 1.19249e-08 25 8.28407)"
+                    fill="#6C3807"
+                    stroke="black"
+                    stroke-width="0.5"
+                  />
+                  <path
+                    id="Vector 92_2"
+                    d="M156.154 11.5824C157.844 13.1453 159.958 17.8109 157.791 19.8737"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 93_2"
+                    d="M75.3592 10.7082C76.1705 12.2712 77.1851 16.9368 76.145 18.9996"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 94_2"
+                    d="M75.7393 22.3068C74.0489 20.7439 71.9349 16.0782 74.1021 14.0155"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 95_2"
+                    d="M34.7185 23.2851C33.9072 21.7222 32.8926 17.0565 33.9327 14.9937"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 96_2"
+                    d="M132.817 17.829C133.63 19.1316 134.389 22.3037 132.959 22.9486"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 97_2"
+                    d="M64.6693 15.8484C65.2437 17.7649 65.7797 22.4322 64.7698 23.381"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 98_2"
+                    d="M99.076 16.0602C98.2627 14.7576 97.5037 11.5855 98.9338 10.9407"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 99_2"
+                    d="M46.0136 16.2805C45.6232 14.9779 45.2589 11.8058 45.9453 11.161"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 100_2"
+                    d="M153.732 10.473C152.341 11.8444 148.511 14.0159 144.315 11.731C139.071 8.87482 143.908 17.8318 147.047 18.2425"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 101_2"
+                    d="M72.151 11.4513C71.4835 12.8227 69.6451 14.9942 67.6314 12.7092C65.1143 9.85308 67.4362 18.8101 68.9425 19.2207"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 102_2"
+                    d="M78.1608 23.4162C79.5516 22.0448 83.3819 19.8733 87.5775 22.1582C92.8221 25.0144 87.9844 16.0574 84.8459 15.6467"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 103_2"
+                    d="M35.8807 24.3944C36.5482 23.0231 38.3865 20.8516 40.4002 23.1365C42.9173 25.9927 40.5955 17.0356 39.0892 16.625"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 104_2"
+                    d="M128.898 13.916C127.975 14.3569 125.588 14.6574 123.418 12.3319C120.704 9.42515 122.605 15.7053 124.352 16.7056"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 105_2"
+                    d="M102.995 19.9732C103.918 19.5323 106.305 19.2318 108.475 21.5573C111.189 24.4641 109.288 18.1839 107.541 17.1836"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 106_2"
+                    d="M49.4344 21.4974C49.877 21.0565 51.0227 20.756 52.0645 23.0815C53.3667 25.9883 52.4545 19.7081 51.6159 18.7078"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 107_2"
+                    d="M156.579 22.1419C155.613 21.2488 154.352 18.728 155.512 17.7671"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 108_2"
+                    d="M73.5173 23.1202C73.0537 22.2271 72.4488 19.7062 73.0054 18.7453"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 109_2"
+                    d="M77.2285 10.8041C78.1945 11.6973 79.4548 14.2181 78.295 15.179"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 110_2"
+                    d="M34.5144 12.7255C34.978 13.6187 35.5829 16.1395 35.0262 17.1004"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 111_2"
+                    d="M131.086 22.1501C130.621 21.4057 130.144 19.663 130.896 19.3993"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 112_2"
+                    d="M63.4471 22.2061C63.1189 21.111 62.7818 18.5467 63.3126 18.1588"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 113_2"
+                    d="M100.807 11.7391C101.272 12.4834 101.749 14.2262 100.997 14.4899"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 114_2"
+                    d="M46.7496 12.7174C46.9728 13.462 47.202 15.2055 46.841 15.4692"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 115_2"
+                    d="M153.241 23.5742C152.275 22.6811 152.236 16.7714 155.229 10.7274"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 116_2"
+                    d="M71.9153 24.5524C71.4517 23.6593 71.4331 17.7497 72.8694 11.7056"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 117_2"
+                    d="M78.6519 10.315C79.6178 11.2081 79.6565 17.1178 76.6641 23.1618"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 118_2"
+                    d="M36.1164 11.2933C36.58 12.1864 36.5985 18.096 35.1623 24.1401"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 119_2"
+                    d="M128.643 24.1066C128.178 23.3623 128.719 19.989 130.998 17.2795"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 120_2"
+                    d="M61.7216 25.0849C61.3934 23.9897 61.7753 19.0264 63.3847 15.0398"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 121_2"
+                    d="M103.25 9.78261C103.715 10.5269 103.174 13.9002 100.895 16.6097"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 122_2"
+                    d="M47.9223 10.7609C48.1454 11.5052 47.8858 14.8785 46.792 17.588"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector 123_2"
+                    d="M145.611 15.39C146.843 14.9221 149.584 14.9272 149.849 18.1039C150.176 22.0208 152.186 17.2516 153.271 13.4359"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 124_2"
+                    d="M68.2534 16.3683C68.8444 15.9003 70.1603 15.9054 70.2876 19.0822C70.4444 22.9991 71.4087 18.2298 71.9299 14.4141"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 125_2"
+                    d="M86.2817 18.4992C85.0504 18.9672 82.3084 18.962 82.0434 15.7853C81.7166 11.8684 79.7073 16.6377 78.6215 20.4533"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 126_2"
+                    d="M39.7783 19.4774C39.1873 19.9454 37.8713 19.9403 37.7441 16.7636C37.5873 12.8467 36.6229 17.6159 36.1018 21.4316"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 127_2"
+                    d="M124.18 17.5844C124.926 17.6188 126.486 18.2914 126.334 20.1644C126.147 22.4738 127.745 20.2498 128.727 18.3431"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 128_2"
+                    d="M57.9864 13.2175C58.5129 13.2681 59.6147 14.2578 59.5076 17.0136C59.3755 20.4116 60.5039 17.1393 61.197 14.3338"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 129_2"
+                    d="M107.713 16.3048C106.967 16.2705 105.407 15.5978 105.559 13.7248C105.746 11.4154 104.148 13.6394 103.166 15.5462"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 130_2"
+                    d="M51.0226 16.9324C50.6648 16.8981 49.9159 16.2254 49.9887 14.3524C50.0785 12.043 49.3115 14.267 48.8405 16.1737"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 131_2"
+                    d="M140.356 14.6366C141.707 15.2518 144.904 17.4771 145.784 20.2866C146.869 23.7507 148.354 21.4827 148.933 19.2456"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 132_2"
+                    d="M65.7312 15.6149C66.3797 16.2301 67.914 18.4554 68.3363 21.2649C68.8569 24.7289 69.5696 22.4609 69.8479 20.2238"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 133_2"
+                    d="M91.5368 19.2526C90.1856 18.6374 86.9888 16.4121 86.109 13.6026C85.0242 10.1385 83.5394 12.4065 82.9595 14.6437"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 134_2"
+                    d="M41.9916 17.6151C41.3432 16.9999 39.8089 14.7746 39.3866 11.9651C38.8659 8.50106 38.1533 10.769 37.875 13.0062"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 135_2"
+                    d="M121.516 17.6723C122.226 18.3526 123.834 20.4001 124.067 22.2142C124.355 24.451 125.416 23.5227 125.959 22.3909"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 136_2"
+                    d="M56.6889 15.6178C57.1906 16.6186 58.3259 19.6313 58.4906 22.3005C58.6937 25.5916 59.4431 24.2257 59.8267 22.5605"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 137_2"
+                    d="M110.377 16.2169C109.667 15.5366 108.059 13.4891 107.826 11.675C107.538 9.43822 106.477 10.3665 105.934 11.4983"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 138_2"
+                    d="M140.056 11.4946C139.673 13.2108 138.558 16.4345 137.166 15.5995M137.989 19.1849C138.24 19.7934 139.12 21.1344 140.634 21.6305M133.798 14.1801C133.435 12.9034 132.513 10.5065 131.723 11.1318M136.29 17.0493C136.49 17.799 136.278 18.8451 133.828 17.0318M123.959 10.1664C126.13 10.6672 130.9 12.6305 132.617 16.4771M135.75 20.5037C137.727 22.5199 142.062 25.8876 143.585 23.229"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 139_2"
+                    d="M91.8365 22.3946C92.2201 20.6784 93.3353 17.4547 94.7271 18.2897M93.9036 14.7043C93.6527 14.0958 92.7725 12.7548 91.2585 12.2587M98.0948 19.7091C98.4575 20.9858 99.3803 23.3827 100.17 22.7574M95.6025 16.8399C95.4025 16.0902 95.615 15.0441 98.0649 16.8574M107.934 23.7228C105.763 23.222 100.992 21.2587 99.2756 17.4121M96.1424 13.3856C94.1654 11.3694 89.8307 8.00161 88.308 10.6602"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 140_2"
+                    d="M42.4443 23.3729C42.6284 21.6567 43.1636 18.4329 43.8316 19.268M43.4364 15.6826C43.316 15.0741 42.8935 13.7331 42.1669 13.2369M45.448 20.6874C45.6221 21.964 46.0649 24.361 46.444 23.7357M44.2518 17.8181C44.1558 17.0684 44.2578 16.0224 45.4336 17.8357M50.1701 24.7011C49.1283 24.2002 46.8387 22.2369 46.0147 18.3904M44.5109 14.3638C43.5621 12.3476 41.4816 8.97986 40.7508 11.6385"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 141_2"
+                    d="M121.838 14.1901C121.42 15.1147 120.414 16.7777 119.732 16.0328M119.77 18.268C119.839 18.6681 120.174 19.611 120.965 20.182M118.01 14.5795C117.957 13.7706 117.723 12.2068 117.206 12.4222M119.069 16.7108C119.093 17.1834 118.85 17.7509 117.69 16.2405M112.964 10.4109C114.123 11.1073 116.567 13.1385 117.076 15.6922M118.358 18.6151C119.229 20.155 121.263 22.92 122.432 21.6613"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 142_2"
+                    d="M54.9155 13.701C54.7149 14.6256 54.2318 16.2885 53.9043 15.5437M53.9228 17.7789C53.9559 18.179 54.1169 19.1219 54.4964 19.6928M53.0779 14.0904C53.0527 13.2815 52.9401 11.7176 52.692 11.9331M53.5864 16.2217C53.5978 16.6943 53.4812 17.2618 52.9243 15.7513M50.6561 9.92181C51.2122 10.6182 52.3855 12.6494 52.6297 15.2031M53.2452 18.126C53.6632 19.6658 54.6395 22.4309 55.2003 21.1721"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Vector 143_2"
+                    d="M110.054 19.6991C110.472 18.7745 111.479 17.1116 112.161 17.8564M112.123 15.6212C112.054 15.2211 111.718 14.2782 110.928 13.7072M113.883 19.3097C113.936 20.1186 114.17 21.6824 114.687 21.467M112.824 17.1784C112.8 16.7058 113.043 16.1383 114.203 17.6487M118.929 23.4783C117.77 22.7819 115.326 20.7507 114.817 18.197M113.535 15.2741C112.664 13.7342 110.629 10.9692 109.461 12.228"
+                    stroke="#46280B"
+                    stroke-width="0.1"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Ellipse 17_2"
+                    d="M69.175 11.9312C69.1479 12.0882 69.1024 12.2054 69.0447 12.2569C68.9883 12.3073 68.9045 12.3034 68.8168 12.1345C68.7292 11.9656 68.6863 11.7254 68.6711 11.5372C68.6556 11.3447 68.6633 11.1547 68.6905 10.9978C68.7177 10.8408 68.7631 10.7235 68.8208 10.672C68.8772 10.6216 68.961 10.6256 69.0487 10.7945C69.1364 10.9634 69.1793 11.2035 69.1944 11.3918C69.2099 11.5842 69.2022 11.7742 69.175 11.9312Z"
+                    stroke="#46280B"
+                    stroke-width="0.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Ellipse 18_2"
+                    d="M151.319 17.844C151.207 18.1561 150.917 18.3506 150.634 18.0885C150.35 17.8263 150.311 17.3275 150.423 17.0154C150.536 16.7032 150.825 16.5087 151.109 16.7709C151.392 17.0331 151.432 17.5318 151.319 17.844Z"
+                    stroke="#46280B"
+                    stroke-width="0.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Ellipse 19_2"
+                    d="M80.5734 16.0453C80.686 15.7331 80.9755 15.5386 81.259 15.8008C81.5426 16.063 81.5821 16.5617 81.4696 16.8738C81.357 17.186 81.0676 17.3805 80.784 17.1183C80.5004 16.8562 80.4609 16.3574 80.5734 16.0453Z"
+                    stroke="#46280B"
+                    stroke-width="0.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Ellipse 20_2"
+                    d="M129.971 16.2896C129.828 16.5194 129.595 16.5194 129.452 16.2896C129.308 16.0598 129.308 15.6871 129.452 15.4573C129.595 15.2275 129.828 15.2275 129.971 15.4573C130.115 15.6871 130.115 16.0598 129.971 16.2896Z"
+                    stroke="#46280B"
+                    stroke-width="0.5"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    id="Ellipse 21_2"
+                    r="0.563573"
+                    transform="matrix(-0.287081 0.957906 0.287081 0.957906 62.4765 12.9711)"
+                    stroke="#46280B"
+                    stroke-width="0.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Ellipse 22_2"
+                    d="M101.921 17.5996C102.065 17.3698 102.298 17.3698 102.441 17.5996C102.585 17.8295 102.585 18.2021 102.441 18.4319C102.298 18.6618 102.065 18.6618 101.921 18.4319C101.778 18.2021 101.778 17.8295 101.921 17.5996Z"
+                    stroke="#46280B"
+                    stroke-width="0.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="Ellipse 23_2"
+                    d="M47.2764 18.5507C47.3498 18.3057 47.4688 18.3057 47.5422 18.5507C47.6156 18.7956 47.6156 19.1927 47.5422 19.4377C47.4688 19.6826 47.3498 19.6826 47.2764 19.4377C47.203 19.1927 47.203 18.7956 47.2764 18.5507Z"
+                    stroke="#46280B"
+                    stroke-width="0.5"
+                    stroke-linecap="round"
+                  />
+                  <ellipse
+                    id="Ellipse 24_2"
+                    rx="0.450287"
+                    ry="0.360247"
+                    transform="matrix(-0.33915 0.940732 0.734247 0.678883 152.6 22.4169)"
+                    fill="#46280B"
+                  />
+                </g>
+                <circle
+                  id="Ellipse 25"
+                  cx="34"
+                  cy="17"
+                  r="1.5"
+                  fill="#D0CECE"
+                  fill-opacity="0.85"
+                  stroke="#636262"
+                />
+              </g>
+              <g id="hangman-head">
+                <path
+                  id="Vector 144"
+                  d="M150.102 105.856C146.262 104.682 142.662 102.043 139.969 99.5117C137.592 97.2762 136.913 93.759 138.418 90.8628C142.584 82.8416 148.931 80.8829 151.99 81.0053C158.568 81.2684 162.055 85.3909 163.597 88.8661C164.426 90.7345 164.51 92.8481 164.012 94.8306C162.969 98.9829 160.626 102.014 158.363 103.992C156.102 105.969 152.974 106.734 150.102 105.856Z"
+                  fill="#E1B98A"
+                  stroke="black"
+                  stroke-width="0.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 145"
+                  d="M148.681 87.0482C149.064 87.8156 149.774 89.5805 149.544 90.5013M147.242 89.0625C148.201 88.7748 150.407 88.2568 151.558 88.487"
+                  stroke="black"
+                  stroke-opacity="0.6"
+                  stroke-width="0.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 146"
+                  d="M157.313 90.5013C157.697 91.2687 158.407 93.0336 158.177 93.9544M155.875 92.5156C156.834 92.2279 159.04 91.7099 160.191 91.9401"
+                  stroke="black"
+                  stroke-opacity="0.6"
+                  stroke-width="0.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 147"
+                  d="M145.919 95.134L153.005 99.8525"
+                  stroke="black"
+                  stroke-opacity="0.6"
+                  stroke-width="0.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <path
+                id="hangman-legs"
+                d="M128.131 174.455C128.552 168.313 129.174 155.279 129.496 148.026L148.733 147C148.982 147.305 148.86 157.693 149.644 167.636C150.147 174.02 151.089 187.569 144.768 186.546C140.937 185.925 141.581 181.931 141.287 178.061C140.955 173.706 140.655 167.905 140.488 164.215C140.402 162.32 139.527 159.066 138.487 160.651C137.892 161.558 137.831 162.675 137.771 163.758L137.769 163.789L137.023 177.293C136.187 183.923 134.375 187 132.842 187C129.71 187 128.486 184.074 128.047 181.096C127.723 178.905 127.98 176.665 128.131 174.455Z"
+                fill="#28589F"
+                stroke="black"
+                stroke-width="0.25"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <g id="hangman-torso">
+                <path
+                  id="Vector 148"
+                  d="M128 119.414C128 102.772 134.21 96.4793 137.677 95C140.71 101.287 149.3 106 154.5 106C151.727 107.479 149.667 114.113 149.233 117.935C148.54 123.852 148.944 140.617 149.233 148.26L128 149V119.414Z"
+                  fill="#207D11"
+                  stroke="black"
+                  stroke-width="0.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector 156"
+                  d="M144 122.545L144.333 118L145.5 119.5L147 118.455L146.333 123L144 122.545Z"
+                  stroke="#B0AB7A"
+                  stroke-opacity="0.6"
+                  stroke-width="0.15"
+                />
+              </g>
+              <g id="hangman-left-arm">
+                <g id="Group 12">
+                  <path
+                    id="Vector 149"
+                    d="M114.257 133.413C115.847 114.728 130.689 96.8394 137.314 95.2493C132.226 99.0656 128.133 111.567 128 117C124.82 117.954 124.461 131.027 124.196 137.388C124.06 138.336 123.874 139.157 123.658 139.865C122.717 142.938 119.26 145.955 116.432 144.428C113.701 142.954 113.78 137.041 114.257 133.413Z"
+                    fill="#E1B98A"
+                    stroke="black"
+                    stroke-width="0.25"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <path
+                  id="Vector 157"
+                  d="M126 120L119 116.5C126.6 101.3 134.5 95.8333 137.5 95C131.1 100.6 128.5 112 128 117C126.8 117.4 126.167 119.167 126 120Z"
+                  fill="#207D11"
+                  stroke="black"
+                  stroke-width="0.25"
+                />
+              </g>
+              <g id="hangman-right-arm">
+                <g id="Group 13">
+                  <path
+                    id="Vector 151"
+                    d="M154.28 136.022C154.035 127.71 150.76 121.98 149 120C149 110.902 152.693 106.654 154 106C153.373 106.941 155.151 110.209 156.027 111.96C158.693 117.292 161.024 124.682 162.446 130.867C163.731 136.459 163.884 145.731 158.197 144.966C157.837 144.918 157.484 144.818 157.144 144.673C154.128 143.388 154.376 139.298 154.28 136.022Z"
+                    fill="#E1B98A"
+                    stroke="black"
+                    stroke-width="0.25"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <path
+                  id="Vector 158"
+                  d="M149 120C148.6 113.2 152.5 105.5 154 106C154 107.5 155.5 111.167 156.5 113C158.1 116.2 159.5 120.333 160 122L152.5 126.5C151.3 122.9 149.667 120.667 149 120Z"
+                  fill="#207D11"
+                  stroke="black"
+                  stroke-width="0.25"
+                  stroke-linecap="round"
+                />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="category-box"><span>category</span></div>
+        <div class="secret-word">
+          <div class="secret-word__letter">s</div>
+          <div class="secret-word__letter">d</div>
+          <div class="secret-word__letter">a</div>
+          <div class="secret-word__letter">f</div>
+          <div class="secret-word__letter">g</div>
+          <div class="secret-word__letter">a</div>
+          <div class="secret-word__letter">s</div>
+          <div class="secret-word__letter">s</div>
+        </div>
+        <div class="keyboard">
+          <div class="keyboard__row row-1">
+            <div class="keyboard__key" value="q"><span>q</span></div>
+            <div class="keyboard__key" value="w"><span>w</span></div>
+            <div class="keyboard__key" value="e"><span>e</span></div>
+            <div class="keyboard__key" value="r"><span>r</span></div>
+            <div class="keyboard__key" value="t"><span>t</span></div>
+            <div class="keyboard__key" value="y"><span>y</span></div>
+            <div class="keyboard__key" value="u"><span>u</span></div>
+            <div class="keyboard__key" value="i"><span>i</span></div>
+            <div class="keyboard__key" value="o"><span>o</span></div>
+            <div class="keyboard__key" value="p"><span>p</span></div>
+          </div>
+          <div class="keyboard__row row-2">
+            <div class="keyboard__key" value="a"><span>a</span></div>
+            <div class="keyboard__key" value="s"><span>s</span></div>
+            <div class="keyboard__key" value="d"><span>d</span></div>
+            <div class="keyboard__key" value="f"><span>f</span></div>
+            <div class="keyboard__key" value="g"><span>g</span></div>
+            <div class="keyboard__key" value="h"><span>h</span></div>
+            <div class="keyboard__key" value="j"><span>j</span></div>
+            <div class="keyboard__key" value="k"><span>k</span></div>
+            <div class="keyboard__key" value="l"><span>l</span></div>
+          </div>
+          <div class="keyboard__row row-3">
+            <div class="keyboard__key" value="z"><span>z</span></div>
+            <div class="keyboard__key" value="x"><span>x</span></div>
+            <div class="keyboard__key" value="c"><span>c</span></div>
+            <div class="keyboard__key" value="v"><span>v</span></div>
+            <div class="keyboard__key" value="b"><span>b</span></div>
+            <div class="keyboard__key" value="n"><span>n</span></div>
+            <div class="keyboard__key" value="m"><span>m</span></div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">Designed and coded by <a href="https://github.com/mkrystkowicz">@mkrystkowicz</a></footer>
+    </section>
+
     <script src="index.js"></script>
   </body>
 </html>

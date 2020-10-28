@@ -1,0 +1,141 @@
+.game {
+  position: relative;
+  background-color: $secondary-color;
+  width: 100vw;
+  height: 100vh;
+
+  .game__header {
+    background-color: $base-color;
+    width: 100%;
+    height: 10vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    img {
+      width: 40%;
+    }
+  }
+  .game--container {
+    display: flex;
+    flex-direction: column;
+  }
+  .hangman {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 30vh;
+  }
+  .hangman svg {
+    width: 20%;
+  }
+  .category-box {
+    position: relative;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    width: 70%;
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+
+    span {
+      text-align: center;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      letter-spacing: 4px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "category";
+      background-color: $secondary-color;
+      padding: 5px 10px;
+      top: -50%;
+      left: 5%;
+      transform: translateY(50%);
+    }
+  }
+  .secret-word {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    max-width: 80%;
+    color: $primary-color;
+    margin: 10% auto;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &__letter {
+      text-align: center;
+      padding: 0.2rem 0.6rem;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        background-color: $primary-color;
+        width: 100%;
+        height: 0.1rem;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+  .keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    &__row {
+      display: flex;
+      flex-basis: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+    &__key {
+      display: flex;
+      margin: 0.3rem;
+      padding: 0.3rem;
+      background-color: $primary-color;
+      justify-content: center;
+      align-self: center;
+      font-size: 1.2rem;
+    }
+  }
+  .footer {
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: lighten($secondary-color, 10%);
+
+    a {
+      text-decoration: none;
+      color: lighten($secondary-color, 30%);
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: lighten($secondary-color, 60%);
+      }
+    }
+  }
+  &::before {
+    content: "";
+    width: 100vw;
+    height: 20%;
+    background-image: url(../assets/wave.svg);
+    background-size: 100% 100%;
+    position: absolute;
+    top: -20%;
+    left: 0;
+    transform: translateY(20%);
+    z-index: 1;
+  }
+}
