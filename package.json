@@ -4,23 +4,18 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "autoprefixer": "^10.0.1",
+    "autoprefixer": "^9.0.0",
     "parcel-bundler": "^1.12.4",
     "postcss-modules": "^3.2.2",
-    "posthtml": "^0.13.4"
+    "posthtml": "^0.13.4",
+    "posthtml-img-autosize": "^0.1.6",
+    "sass": "^1.27.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.12.1",
-    "posthtml-img-autosize": "^0.1.6"
+    "@babel/preset-env": "^7.12.1"
   },
-  "browserslist": [
-    "defaults",
-    "not IE 11",
-    "not IE_Mob 11",
-    "maintained node versions"
-  ],
   "scripts": {
     "dev": "parcel src/index.html",
     "prod": "parcel build src/index.html ../build/output"
