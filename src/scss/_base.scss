@@ -1,0 +1,17 @@
+$breakpoints: (
+  "small": 320px,
+  "med": 640px,
+  "large": 920px,
+  "wide": 1200px,
+  "mega": 1400px,
+);
+
+@mixin breakpoint($bp, $rule: min-width) {
+    @media screen and (#{$rule}: map-get($breakpoints, $bp)) {
+        @content;
+    }
+}
+
+$primary-color: #2e2e2e;
+$secondary-color: #c4c4c4;
+$base-color: #aaa;
