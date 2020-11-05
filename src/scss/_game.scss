@@ -31,7 +31,7 @@
       width: 100%;
       display: grid;
       grid-template-rows: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 2fr 3fr 1fr;
+      grid-template-columns: 1fr 2fr 2fr 1fr;
       align-content: center;
       grid-template-areas:
         ". hangman category ."
@@ -53,6 +53,9 @@
   .hangman svg {
     width: 60%;
 
+    @include breakpoint(med) {
+      width: 80%;
+    }
     @include breakpoint(large) {
       width: 100%;
       align-self: center;
@@ -67,7 +70,7 @@
     border: 2px solid $primary-color;
     color: $primary-color;
     width: 70%;
-    padding: 15px 10px;
+    padding: 10px 5px;
     display: flex;
     align-items: center;
     justify-self: center;
@@ -76,9 +79,12 @@
     span {
       text-align: center;
       margin: 0 auto;
-      font-size: 1.2rem;
+      font-size: 1rem;
       letter-spacing: 4px;
 
+      @include breakpoint(med) {
+        font-size: 1.1rem;
+      }
       @include breakpoint(wide) {
         font-size: 1.2rem;
       }
@@ -92,10 +98,11 @@
       top: -50%;
       left: 5%;
       transform: translateY(50%);
-
+      font-size: 0.5rem;
+      
       @include breakpoint(wide) {
         top: -40%;
-        font-size: 0.6rem;
+        font-size: 0.5rem;
       }
     }
 
@@ -107,7 +114,7 @@
   .secret-word {
     display: flex;
     flex-wrap: wrap;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     max-width: 80%;
     color: $primary-color;
     margin: 10% auto;
@@ -116,7 +123,7 @@
 
     &__letter {
       text-align: center;
-      padding: 0.2rem 0.6rem;
+      padding: 0.3rem 0.5rem;
       position: relative;
 
       &::after {
@@ -124,12 +131,22 @@
         position: absolute;
         display: block;
         background-color: $primary-color;
-        width: 100%;
+        width: 50%;
         height: 0.1rem;
         bottom: 0;
-        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include breakpoint(wide) {
+          width: 100%;
+          left: 0;
+          transform: none;
+        }
       }
 
+      @include breakpoint(med) {
+        font-size: 1.4rem;
+      }
       @include breakpoint(wide) {
         padding: 0.2rem 0.4rem;
       }
@@ -142,7 +159,7 @@
       max-width: 80%;
       font-size: 2.2rem;
       justify-content: space-between;
-      margin: 10% 20%;
+      margin: 0 20%;
     }
   }
   .keyboard {
@@ -159,19 +176,26 @@
     }
     &__key {
       display: flex;
-      width: 2rem;
-      height: 2rem;
+      width: 1.2rem;
+      height: 1.2rem;
       margin: 0.3rem;
       padding: 0.3rem;
       background-color: $primary-color;
       justify-content: center;
       align-self: center;
-      font-size: 1.2rem;
+      font-size: 0.6rem;
       cursor: pointer;
 
+      @include breakpoint(med) {
+        width: 1.6rem;
+        height: 1.6rem;
+        font-size: .8rem;
+      }
       @include breakpoint(large) {
-        margin: 0.5rem;
-        padding: 0.5rem;
+        margin: 0.3rem;
+        padding: 0.3rem;
+        width: 1.8rem;
+      height: 1.8rem;
         font-size: 1.2rem;
       }
       @include breakpoint(wide) {
