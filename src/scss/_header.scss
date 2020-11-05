@@ -38,5 +38,9 @@
     @include breakpoint(med) {
       font-size: 1.4rem;
     }
+
+    @include breakpoint(mega) {
+      font-size: 2.4rem;
+    }
   }
 }
