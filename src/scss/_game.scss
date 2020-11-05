@@ -26,6 +26,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    
 
     @include breakpoint(large) {
       width: 100%;
@@ -44,7 +45,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 35vh;
+    height: 30vh;
+    
 
     @include breakpoint(large) {
       grid-area: hangman;
@@ -57,7 +59,7 @@
       width: 80%;
     }
     @include breakpoint(large) {
-      width: 100%;
+      // width: 100%;
       align-self: center;
       transform: scale(1.3);
     }
@@ -99,7 +101,7 @@
       left: 5%;
       transform: translateY(50%);
       font-size: 0.5rem;
-      
+
       @include breakpoint(wide) {
         top: -40%;
         font-size: 0.5rem;
@@ -167,6 +169,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    z-index: 1;
 
     &__row {
       display: flex;
@@ -180,22 +183,29 @@
       height: 1.2rem;
       margin: 0.3rem;
       padding: 0.3rem;
+      color: $secondary-color;
       background-color: $primary-color;
       justify-content: center;
       align-self: center;
       font-size: 0.6rem;
+      transition: background-color 0.3s ease-out, color 0.4s ease-in;
       cursor: pointer;
+
+      &:hover {
+        color: lighten($secondary-color, 60%);
+        background-color: darken($primary-color, 20%);
+      }
 
       @include breakpoint(med) {
         width: 1.6rem;
         height: 1.6rem;
-        font-size: .8rem;
+        font-size: 0.8rem;
       }
       @include breakpoint(large) {
         margin: 0.3rem;
         padding: 0.3rem;
         width: 1.8rem;
-      height: 1.8rem;
+        height: 1.8rem;
         font-size: 1.2rem;
       }
       @include breakpoint(wide) {

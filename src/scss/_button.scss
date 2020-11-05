@@ -1,5 +1,13 @@
 button {
     padding: 10px 15px;
     border: none;
+    color: $secondary-color;
     background-color: $primary-color;
+    transition: background-color .3s ease-out, color .4s ease-in;
+    cursor: pointer;
+
+    &:hover {
+        color: lighten($secondary-color, 60%);
+        background-color: darken($primary-color, 20%);
+    }
 }
