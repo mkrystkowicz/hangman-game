@@ -7,6 +7,7 @@
     <link rel="icon" type="image/svg+xml" href="/assets/hangman-icon.svg" />
     <link rel="alternate icon" href="/assets/hangman-icon.svg" />
     <link rel="mask-icon" href="/assets/hangman-icon.svg" color="#ff8a01" />
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
   </head>
   <body>
     <section class="header">
@@ -16,7 +17,7 @@
         </div>
         <div class="header__game-options">
           <button class="game-start-btn btn">play game</button>
-          <button class="info-btn btn">how to play</button>
+          <button class="game-info-btn btn">how to play</button>
         </div>
       </div>
     </section>
@@ -1963,7 +1964,20 @@
           </div>
         </div>
       </div>
-      <footer class="footer">Designed and coded by <a href="https://github.com/mkrystkowicz">@mkrystkowicz</a></footer>
+      <footer class="footer">
+        Designed and coded by
+        <a href="https://github.com/mkrystkowicz">@mkrystkowicz</a>
+      </footer>
+    </section>
+
+    <section class="game-info--active">
+      <div class="game-info__modal-container">
+        <button class="game-info__close-btn"><i class="fas fa-times"></i>
+        </button>
+        <div class="game-info__container">
+          <h3 class="title">title</h3>
+        </div>
+      </div>
     </section>
 
     <script src="./js/index.js"></script>

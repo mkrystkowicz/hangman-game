@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "autoprefixer": "^9.0.0",
     "parcel-bundler": "^1.12.4",
     "postcss-modules": "^3.2.2",
