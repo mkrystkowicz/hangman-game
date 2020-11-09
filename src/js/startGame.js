@@ -1,12 +1,17 @@
 import gsap from "gsap";
+import randomWord from "./randomWord";
+import getWordDefinition from "./getWordDefinition";
 
 export default function startGame() {
-  scrollToGame();
+  //   scrollToGame();
 
   const logoContainer = document.querySelector(".game__header .logo-container");
 
+  randomWord().then((data) => getWordDefinition(data));
+
   logoContainer.addEventListener("click", () => restartGame());
 }
+
 
 function scrollToGame() {
   const height = window.innerHeight;
