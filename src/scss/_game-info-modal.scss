@@ -1,17 +1,18 @@
 .game-info {
   opacity: 0;
   pointer-events: none;
-  transition: all 0.3s ease-in;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
+  transition: opacity 0.5s ease-in;
+  
   &--active {
     opacity: 1;
     pointer-events: all;
     width: 80vw;
     height: 90vh;
+    transform: translate(-50%, -50%);
     background-color: $primary-color;
     z-index: 3;
     border-radius: 5px;
