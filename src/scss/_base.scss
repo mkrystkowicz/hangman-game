@@ -7,11 +7,16 @@ $breakpoints: (
 );
 
 @mixin breakpoint($bp, $rule: min-width) {
-    @media screen and (#{$rule}: map-get($breakpoints, $bp)) {
-        @content;
-    }
+  @media screen and (#{$rule}: map-get($breakpoints, $bp)) {
+    @content;
+  }
 }
 
 $primary-color: #c4c4c4;
 $secondary-color: #2e2e2e;
 $base-color: #aaa;
+
+.unselectable {
+  pointer-events: none;
+  user-select: none;
+}

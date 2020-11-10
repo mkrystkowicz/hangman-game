@@ -1,3 +1,5 @@
+import gsap from "gsap/gsap-core";
+
 export default function initGame(object) {
   const { word, definitions } = object;
   const { definition: wordDefinition } = getWordDefinition(definitions);
@@ -12,6 +14,7 @@ function getWordDefinition(array) {
 }
 
 function updateDefinition(wordDefinition) {
-  const definitionBox = document.querySelector(".definition-box span");
-  definitionBox.textContent = wordDefinition;
+  const definitionText = document.querySelector(".definition-box span");
+  // gsap.fromTo()
+  definitionText.textContent = wordDefinition;
 }

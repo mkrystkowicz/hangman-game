@@ -1,4 +1,3 @@
-import gsap from "gsap";
 import showGameInfo from "./showGameInfo";
 import startGame from "./startGame";
 import "../scss/main.scss";

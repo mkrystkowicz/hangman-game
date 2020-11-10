@@ -23,9 +23,8 @@ function scrollToGame() {
     left: 0,
     behavior: "smooth",
   });
-  tl.fromTo(
+  tl.to(
     gameHeader,
-    { opacity: 0, y: "-=100" },
     { duration: 0.3, opacity: 1, y: 0 }
   );
 }
