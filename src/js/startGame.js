@@ -3,15 +3,13 @@ import getRandomWord from "./randomWord";
 import getWordDefinitions from "./getWordDefinitions";
 
 export default function startGame() {
-  //   scrollToGame();
+  scrollToGame();
 
   const logoContainer = document.querySelector(".game__header .logo-container");
-
   const word = getRandomWord().then((data) => getWordDefinitions(data));
-  console.log(word);
+
   logoContainer.addEventListener("click", () => restartGame());
 }
-
 
 function scrollToGame() {
   const height = window.innerHeight;

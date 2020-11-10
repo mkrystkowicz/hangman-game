@@ -69,12 +69,13 @@
       transform: scale(2);
     }
   }
-  .category-box {
+  .definition-box {
     position: relative;
     border: 2px solid $primary-color;
     color: $primary-color;
     width: 70%;
-    padding: 10px 5px;
+    height: 100%;
+    padding: 15px 10px;
     display: flex;
     align-items: center;
     justify-self: center;
@@ -83,25 +84,25 @@
     span {
       text-align: center;
       margin: 0 auto;
-      font-size: 1rem;
+      font-size: .6rem;
       letter-spacing: 4px;
 
       @include breakpoint(med) {
-        font-size: 1.1rem;
+        font-size: 0.7rem;
       }
       @include breakpoint(wide) {
-        font-size: 1.2rem;
+        font-size: 0.8rem;
       }
     }
 
     &::before {
       position: absolute;
-      content: "category";
+      content: "definition";
       background-color: $secondary-color;
       padding: 5px 10px;
-      top: -50%;
+      top: 0;
       left: 5%;
-      transform: translateY(50%);
+      transform: translateY(-50%);
       font-size: 0.5rem;
 
       @include breakpoint(wide) {
