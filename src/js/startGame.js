@@ -1,14 +1,14 @@
 import gsap from "gsap";
-import randomWord from "./randomWord";
-import getWordDefinition from "./getWordDefinition";
+import getRandomWord from "./randomWord";
+import getWordDefinitions from "./getWordDefinitions";
 
 export default function startGame() {
   //   scrollToGame();
 
   const logoContainer = document.querySelector(".game__header .logo-container");
 
-  randomWord().then((data) => getWordDefinition(data));
-
+  const word = getRandomWord().then((data) => getWordDefinitions(data));
+  console.log(word);
   logoContainer.addEventListener("click", () => restartGame());
 }
 

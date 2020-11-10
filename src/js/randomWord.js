@@ -1,8 +1,12 @@
-export default function randomWord() {
-  const API_URL = "https://random-words-api.herokuapp.com/w?n=1";
+const randomWordURL = "https://random-words-api.herokuapp.com/w?n=1";
 
-  return fetch(API_URL)
-    .then((res) => res.json())
-    .then((data) => data[0])
-    .catch((err) => err);
-}
+export default async function randomWord() {
+  try {
+    const response = await fetch(randomWordURL);
+    const data = await response.json();
+
+    return data;
+  } catch (err) {
+    throw new Error("Could not get word", err);
+  }
+};

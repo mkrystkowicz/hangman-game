@@ -1,14 +1,12 @@
-export default function gameInit(obj) {
-  const { word, definitions } = obj;
+export default function gameInit(object) {
+  const { word, definitions } = object;
 
-  const wordDefinition = getWordDefinition(definitions);
-
-  console.log(word);
+  const {  definition: wordDefinition  } = getWordDefinition(definitions);
+  console.log(wordDefinition);;
 }
 
 function getWordDefinition(array) {
   const index = Math.floor(Math.random() * array.length);
-  const { definition } = array[index];
-
-  return definition;
+  
+  return array[index];  
 }
