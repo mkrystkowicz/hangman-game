@@ -82,6 +82,8 @@
     align-items: center;
     justify-self: center;
     margin: 0 auto;
+    transform: translateY(-100%);
+    opacity: 0;
 
     span {
       text-align: center;
@@ -182,6 +184,7 @@
       flex-basis: 100%;
       align-items: center;
       justify-content: center;
+      opacity: 0;
     }
     &__key {
       display: flex;
