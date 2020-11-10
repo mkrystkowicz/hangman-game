@@ -115,6 +115,7 @@
 
     @include breakpoint(large) {
       width: 50%;
+      height: auto;
       grid-area: category;
     }
   }
@@ -195,11 +196,6 @@
       font-size: 0.6rem;
       transition: background-color 0.3s ease-out, color 0.4s ease-in;
       cursor: pointer;
-
-      .unselectable {
-        pointer-events: none;
-        user-select: none;
-      }
 
       &:hover {
         color: lighten($secondary-color, 60%);

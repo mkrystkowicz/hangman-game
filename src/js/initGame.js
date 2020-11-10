@@ -5,6 +5,7 @@ export default function initGame(object) {
   const { definition: wordDefinition } = getWordDefinition(definitions);
 
   updateDefinition(wordDefinition);
+  console.log(word);
 }
 
 function getWordDefinition(array) {
