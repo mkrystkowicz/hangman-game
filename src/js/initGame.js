@@ -18,11 +18,13 @@ function getWordDefinition(definitions) {
 function updateDefinition(wordDefinition) {
   const definitionBox = document.querySelector(".definition-box");
   const definitionText = definitionBox.querySelector("span");
+
   gsap.fromTo(
     definitionBox,
     { opacity: 0, y: "-100" },
     { duration: 0.3, opacity: 1, y: 0 }
   );
+  
   definitionText.textContent = wordDefinition;
 }
 
@@ -39,6 +41,7 @@ function updateSecretWord(word) {
     fragment.appendChild(newLetter);
   });
   secretWordContainer.appendChild(fragment);
+
   gsap.fromTo(
     [...secretWordContainer.children],
     { opacity: 0, x: "100" },

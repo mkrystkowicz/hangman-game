@@ -6,7 +6,8 @@ export default function startGame() {
   scrollToGame();
 
   const logoContainer = document.querySelector(".game__header .logo-container");
-  const word = getRandomWord().then((data) => getWordDefinitions(data));
+  
+  getRandomWord().then((data) => getWordDefinitions(data));
 
   logoContainer.addEventListener("click", () => restartGame());
 }
@@ -29,6 +30,6 @@ function scrollToGame() {
   );
 }
 
-function restartGame() {
-  window.location.assign(window.location.href);
-}
+function restartGame(){
+   window.location.assign(window.location.href)
+};

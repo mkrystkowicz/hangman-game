@@ -21,3 +21,4 @@ export default async function getWordDefinitions(array) {
     throw new Error("Could not get word definition", err);
   }
 }
+
