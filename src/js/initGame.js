@@ -7,6 +7,39 @@ export default function initGame(object) {
   updateDefinition(wordDefinition);
   updateSecretWord(word);
   animateKeyboard();
+
+  const keyboard = document.querySelector(".keyboard");
+
+  keyboard.addEventListener("click", (e) => handleLetter(e, word));
+  window.addEventListener("keydown", (e) => handleKey(e, word));
+}
+
+function handleKey(e, word) {
+  const letter = e.key;
+
+  return checkLetter(letter, word);
+}
+
+function handleLetter(e, word) {
+  const letter = e.target.getAttribute("value");
+
+  if (!letter) return;
+  else return checkLetter(letter, word);
+}
+
+function checkLetter(letter, word) {
+  const wordArray = word.split("");
+  const secretWordContainer = [
+    ...document.querySelector(".secret-word").children,
+  ];
+
+  if (wordArray.includes(letter)) {
+    wordArray.forEach((element, index) => {
+      if (element === letter) {
+        secretWordContainer[index].textContent = letter;
+      }
+    });
+  }
 }
 
 function getWordDefinition(definitions) {
@@ -36,7 +69,6 @@ function updateSecretWord(word) {
   wordArray.forEach((letter) => {
     const newLetter = document.createElement("div");
 
-    newLetter.textContent = letter;
     newLetter.classList.add("secret-word__letter");
     fragment.appendChild(newLetter);
   });
