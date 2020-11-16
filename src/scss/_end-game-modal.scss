@@ -48,5 +48,13 @@
     .end-game-modal__button {
         opacity: 0;
         margin-top: 1rem;
+
+        @include breakpoint(med) {
+            font-size: 1.4rem;
+        }
+
+        @include breakpoint(mega) {
+            font-size: 2.4rem;
+        }
     }
 }
