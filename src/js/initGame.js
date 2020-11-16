@@ -20,7 +20,7 @@ export default function initGame(object) {
     if (result === false) {
       playerLifes--;
       checkLifes(playerLifes, word);
-    } else return;
+    } else checkLifes(playerLifes, word);
   });
   window.addEventListener("keydown", ({ key: letter }) => {
     if (!letter) return;
@@ -29,7 +29,7 @@ export default function initGame(object) {
     if (result === false) {
       playerLifes--;
       checkLifes(playerLifes, word);
-    } else return;
+    } else checkLifes(playerLifes, word);
   });
 }
 
@@ -53,7 +53,7 @@ function checkIfWon(word) {
 }
 
 const checkLifes = (lifes, word) =>
-  lifes >= 0 ? checkIfWon(word) : showGameOver();
+  lifes > 0 ? checkIfWon(word) : showGameOver();
 
 function checkIfGuessed(previousLength, currentLength) {
   if (previousLength < currentLength) return true;
