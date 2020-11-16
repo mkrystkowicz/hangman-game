@@ -1,8 +1,11 @@
 import gsap from "gsap/gsap-core";
+import { check } from "prettier";
 
 export default function initGame(object) {
   const { word, definitions } = object;
   const { definition: wordDefinition } = getWordDefinition(definitions);
+
+  let playerLifes = 10;
 
   updateDefinition(wordDefinition);
   updateSecretWord(word);
@@ -10,21 +13,15 @@ export default function initGame(object) {
 
   const keyboard = document.querySelector(".keyboard");
 
-  keyboard.addEventListener("click", (e) => handleLetter(e, word));
-  window.addEventListener("keydown", (e) => handleKey(e, word));
-}
-
-function handleKey(e, word) {
-  const letter = e.key;
-
-  return checkLetter(letter, word);
-}
-
-function handleLetter(e, word) {
-  const letter = e.target.getAttribute("value");
-
-  if (!letter) return;
-  else return checkLetter(letter, word);
+  keyboard.addEventListener("click", ({ target }) => {
+    const letter = target.getAttribute("value");
+    if (!letter) return;
+    else return checkLetter(letter, word);
+  });
+  window.addEventListener("keydown", ({ key: letter }) => {
+    if (!letter) return;
+    else return checkLetter(letter, word);
+  });
 }
 
 function checkLetter(letter, word) {
