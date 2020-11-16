@@ -34,11 +34,15 @@ export default function initGame(object) {
 }
 
 function showGameOver() {
-  console.log("game over");
+  const modal = document.querySelector(".game-over-modal");
+
+  modal.classList.add("--active");
 }
 
 function showGameWon() {
-  console.log("game won");
+  const modal = document.querySelector(".game-won-modal");
+
+  modal.classList.add("--active");
 }
 
 function checkIfWon(word) {
