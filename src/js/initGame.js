@@ -3,7 +3,7 @@ import gsap from "gsap/gsap-core";
 export default function initGame(object) {
   const { word, definitions } = object;
   const { definition: wordDefinition } = getWordDefinition(definitions);
-  console.log(word);
+
   let playerLifes = 10;
 
   updateDefinition(wordDefinition);

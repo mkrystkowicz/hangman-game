@@ -1,0 +1,57 @@
+.game-won-modal{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $secondary-color;
+    color: $primary-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    
+    
+    &--active {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: $secondary-color;
+        color: $primary-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__title {
+            font-size: 4rem;
+
+            @include breakpoint(small) {
+                font-size: 6rem;
+            }
+            @include breakpoint(wide) {
+                font-size: 8rem;
+            }
+        }
+
+        &_subtitle {
+            margin-top: -0.3rem;
+            
+            @include breakpoint(wide) {
+                margin-top: -0.5rem;
+                font-size: 1.2rem;
+            }
+        }
+
+        &__button {
+            margin-top: 1rem;
+
+            @include breakpoint(wide) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
