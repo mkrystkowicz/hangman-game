@@ -1,10 +1,9 @@
 import gsap from "gsap/gsap-core";
-import { check } from "prettier";
 
 export default function initGame(object) {
   const { word, definitions } = object;
   const { definition: wordDefinition } = getWordDefinition(definitions);
-
+  console.log(word);
   let playerLifes = 10;
 
   updateDefinition(wordDefinition);
@@ -16,12 +15,49 @@ export default function initGame(object) {
   keyboard.addEventListener("click", ({ target }) => {
     const letter = target.getAttribute("value");
     if (!letter) return;
-    else return checkLetter(letter, word);
+    let result = checkLetter(letter, word);
+
+    if (result === false) {
+      playerLifes--;
+      checkLifes(playerLifes, word);
+    } else return;
   });
   window.addEventListener("keydown", ({ key: letter }) => {
     if (!letter) return;
-    else return checkLetter(letter, word);
+    let result = checkLetter(letter, word);
+
+    if (result === false) {
+      playerLifes--;
+      checkLifes(playerLifes, word);
+    } else return;
   });
+}
+
+function showGameOver() {
+  console.log("game over");
+}
+
+function showGameWon() {
+  console.log("game won");
+}
+
+function checkIfWon(word) {
+  const secretWordLetters = [
+    ...document.querySelector(".secret-word").children,
+  ];
+  const secretWordLettersArray = secretWordLetters.map((el) =>
+    el.textContent.toLowerCase()
+  );
+
+  if (word.toLowerCase() === secretWordLettersArray.join("")) showGameWon();
+}
+
+const checkLifes = (lifes, word) =>
+  lifes >= 0 ? checkIfWon(word) : showGameOver();
+
+function checkIfGuessed(previousLength, currentLength) {
+  if (previousLength < currentLength) return true;
+  else return false;
 }
 
 function checkLetter(letter, word) {
@@ -29,6 +65,7 @@ function checkLetter(letter, word) {
   const secretWordContainer = [
     ...document.querySelector(".secret-word").children,
   ];
+  const lengthBeforeWordCheking = checkLength(secretWordContainer);
 
   if (wordArray.includes(letter)) {
     wordArray.forEach((element, index) => {
@@ -37,6 +74,19 @@ function checkLetter(letter, word) {
       }
     });
   }
+
+  const lengthAfterWordCheking = checkLength(secretWordContainer);
+
+  return checkIfGuessed(lengthBeforeWordCheking, lengthAfterWordCheking);
+}
+
+function checkLength(array) {
+  let accumulator = 0;
+  array.forEach((el) => {
+    if (el.textContent) accumulator++;
+  });
+
+  return accumulator;
 }
 
 function getWordDefinition(definitions) {
