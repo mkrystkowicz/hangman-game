@@ -1,4 +1,5 @@
 import gsap from "gsap/gsap-core";
+import endGame from "./endGame";
 
 export default function initGame(object) {
   const { word, definitions } = object;
@@ -33,18 +34,6 @@ export default function initGame(object) {
   });
 }
 
-function showGameOver() {
-  const modal = document.querySelector(".game-over-modal");
-
-  modal.classList.add("--active");
-}
-
-function showGameWon() {
-  const modal = document.querySelector(".game-won-modal");
-
-  modal.classList.add("--active");
-}
-
 function checkIfWon(word) {
   const secretWordLetters = [
     ...document.querySelector(".secret-word").children,
@@ -53,11 +42,11 @@ function checkIfWon(word) {
     el.textContent.toLowerCase()
   );
 
-  if (word.toLowerCase() === secretWordLettersArray.join("")) showGameWon();
+  if (word.toLowerCase() === secretWordLettersArray.join("")) endGame("win");
 }
 
 const checkLifes = (lifes, word) =>
-  lifes > 0 ? checkIfWon(word) : showGameOver();
+  lifes > 0 ? checkIfWon(word) : endGame("lose");
 
 function checkIfGuessed(previousLength, currentLength) {
   if (previousLength < currentLength) return true;
