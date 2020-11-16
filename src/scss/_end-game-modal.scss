@@ -27,6 +27,7 @@
     }
 
     .end-game-modal__title {
+        opacity: 0;
         font-size: 4rem;
 
         @include breakpoint(large) {
@@ -35,6 +36,7 @@
     }
     
     .end-game-modal__subtitle {
+        opacity: 0;
         margin-top: -0.3rem;
 
         @include breakpoint(large) {
@@ -44,6 +46,7 @@
     }
 
     .end-game-modal__button {
+        opacity: 0;
         margin-top: 1rem;
     }
 }
