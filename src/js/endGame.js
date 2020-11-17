@@ -17,11 +17,14 @@ export default function endGame(result) {
         subTitle.textContent = "don't worry you can try again 😅";
     }
     
-    gameEndModal.addEventListener('transitionend', () => animateModalElements(title, subTitle, button))
+    gameEndModal.addEventListener(
+      "transitionend",
+      animateModalElements(title, subTitle, button)
+    );
     
     button.addEventListener("click", () =>
-    window.location.assign(window.location.href)
-  );
+      window.location.assign(window.location.href)
+    );
 }
 
 function animateModalElements(title, subTitle, button) {
