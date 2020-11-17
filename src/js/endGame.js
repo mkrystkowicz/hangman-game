@@ -1,5 +1,4 @@
 import gsap from "gsap";
-import initGame from "./initGame";
 
 export default function endGame(result) {
   const gameEndModal = document.querySelector(".end-game-modal");
@@ -20,6 +19,10 @@ export default function endGame(result) {
   gameEndModal.addEventListener(
     "transitionend",
     animateModalElements(title, subTitle, button)
+  );
+
+  button.addEventListener("click", () =>
+    window.location.assign(window.location.href)
   );
 
   return true;

@@ -4,6 +4,7 @@ import endGame from "./endGame";
 export default function initGame(object) {
   const { word, definitions } = object;
   const { definition: wordDefinition } = getWordDefinition(definitions);
+
   let gameIsOver = false;
   let playerLifes = 10;
 
@@ -30,7 +31,7 @@ export default function initGame(object) {
   window.addEventListener("keydown", ({ key: letter }) => {
     if (!letter || gameIsOver) return;
     let result = checkLetter(letter, word);
-    
+
     if (result === false) {
       playerLifes--;
       const gameResult = checkLifes(playerLifes, word);
