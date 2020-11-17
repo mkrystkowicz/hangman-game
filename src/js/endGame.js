@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import initGame from "./initGame";
 
 export default function endGame(result) {
   const gameEndModal = document.querySelector(".end-game-modal");
@@ -6,25 +7,22 @@ export default function endGame(result) {
   const subTitle = gameEndModal.querySelector(".end-game-modal__subtitle");
   const button = gameEndModal.querySelector(".end-game-modal__button");
 
-    gameEndModal.classList.add("end-game-modal--active");
-    
-    
-    if (result === "win") {
-        title.textContent = "you won";
-        subTitle.textContent = "unfortunately we don't have any awards 😥";
-    } else {
-        title.textContent = "game over";
-        subTitle.textContent = "don't worry you can try again 😅";
-    }
-    
-    gameEndModal.addEventListener(
-      "transitionend",
-      animateModalElements(title, subTitle, button)
-    );
-    
-    button.addEventListener("click", () =>
-      window.location.assign(window.location.href)
-    );
+  gameEndModal.classList.add("end-game-modal--active");
+
+  if (result === "win") {
+    title.textContent = "you won";
+    subTitle.textContent = "unfortunately we don't have any awards 😥";
+  } else {
+    title.textContent = "game over";
+    subTitle.textContent = "don't worry you can try again 😅";
+  }
+
+  gameEndModal.addEventListener(
+    "transitionend",
+    animateModalElements(title, subTitle, button)
+  );
+
+  return true;
 }
 
 function animateModalElements(title, subTitle, button) {

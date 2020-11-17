@@ -4,7 +4,7 @@ import endGame from "./endGame";
 export default function initGame(object) {
   const { word, definitions } = object;
   const { definition: wordDefinition } = getWordDefinition(definitions);
-
+  let gameIsOver = false;
   let playerLifes = 10;
 
   updateDefinition(wordDefinition);
@@ -20,17 +20,25 @@ export default function initGame(object) {
 
     if (result === false) {
       playerLifes--;
-      checkLifes(playerLifes, word);
-    } else checkLifes(playerLifes, word);
+      const gameResult = checkLifes(playerLifes, word);
+      gameIsOver = gameResult;
+    } else {
+      const gameResult = checkLifes(playerLifes, word);
+      gameIsOver = gameResult;
+    }
   });
   window.addEventListener("keydown", ({ key: letter }) => {
-    if (!letter) return;
+    if (!letter || gameIsOver) return;
     let result = checkLetter(letter, word);
-
+    
     if (result === false) {
       playerLifes--;
-      checkLifes(playerLifes, word);
-    } else checkLifes(playerLifes, word);
+      const gameResult = checkLifes(playerLifes, word);
+      gameIsOver = gameResult;
+    } else {
+      const gameResult = checkLifes(playerLifes, word);
+      gameIsOver = gameResult;
+    }
   });
 }
 
