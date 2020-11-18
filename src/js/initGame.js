@@ -38,22 +38,26 @@ export default function initGame(object) {
 
       markUsedLetters(usedLetters);
     });
-    window.addEventListener("keydown", ({ key: letter }) => {
-      if (!letter || gameIsOver) return;
-      usedLetters.push(letter);
-      let result = checkLetter(letter, word);
+    window.addEventListener("keypress", ({ key: letter, keyCode, which }) => {
+      if (keyCode >= 97 && keyCode <= 122) {
+        if (!letter || gameIsOver) return;
 
-      if (result === false) {
-        playerLifes--;
-        animateHangman(playerLifes);
-        const gameResult = checkLifes(playerLifes, word);
-        gameIsOver = gameResult;
-      } else {
-        const gameResult = checkLifes(playerLifes, word);
-        gameIsOver = gameResult;
+        usedLetters.push(letter);
+      
+        let result = checkLetter(letter, word);
+
+        if (result === false) {
+          playerLifes--;
+          animateHangman(playerLifes);
+          const gameResult = checkLifes(playerLifes, word);
+          gameIsOver = gameResult;
+        } else {
+          const gameResult = checkLifes(playerLifes, word);
+          gameIsOver = gameResult;
+        }
+
+        markUsedLetters(usedLetters);
       }
-
-      markUsedLetters(usedLetters);
     });
   }
 }
