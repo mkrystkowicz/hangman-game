@@ -61,14 +61,14 @@ export default function animateHangman(currentLife) {
 }
 
 function entranceAnimation(...elements) {
-  gsap.fromTo(
-    elements,
-    { opacity: 1, scale: 1 },
-    { duration: 1, opacity: 0, delay: 0.6, ease: "bounce.out" }
-  );
-
-  // const tl = gsap.timeline()
-  // gsap.to(opacity:1)
+  const tl = gsap.timeline();
+  tl.to(elements, { opacity: 1 });
+  tl.to(elements, {
+    duration: 1,
+    opacity: 0,
+    delay: 0.6,
+    ease: "bounce.out",
+  });
 }
 
 function gallowLegsAnimation(element) {
