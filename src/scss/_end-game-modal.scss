@@ -11,14 +11,14 @@
     transition: all .3s ease-in;
 
     &--active {
-        opacity: 0.95;
+        opacity: 1;
         pointer-events: all;
         position: fixed;
         width: 100vw;
         height: 100vh;
         top: 0;
         left: 0;
-        background-color: $secondary-color;
+        background-color: rgba($secondary-color, 0.95);
         color: $primary-color;
         display: flex;
         flex-direction: column;
