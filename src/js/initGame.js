@@ -5,6 +5,7 @@ import animateHangman from "./animateHangman";
 export default function initGame(object) {
   const { word, definitions } = object;
   const { definition: wordDefinition } = getWordDefinition(definitions);
+  const usedLetters = [];
 
   let gameIsOver = false;
   let playerLifes = 10;
@@ -22,6 +23,7 @@ export default function initGame(object) {
     keyboard.addEventListener("click", ({ target }) => {
       const letter = target.getAttribute("value");
       if (!letter) return;
+      usedLetters.push(letter);
       let result = checkLetter(letter, word);
 
       if (result === false) {
@@ -33,9 +35,12 @@ export default function initGame(object) {
         const gameResult = checkLifes(playerLifes, word);
         gameIsOver = gameResult;
       }
+
+      markUsedLetters(usedLetters);
     });
     window.addEventListener("keydown", ({ key: letter }) => {
       if (!letter || gameIsOver) return;
+      usedLetters.push(letter);
       let result = checkLetter(letter, word);
 
       if (result === false) {
@@ -47,8 +52,20 @@ export default function initGame(object) {
         const gameResult = checkLifes(playerLifes, word);
         gameIsOver = gameResult;
       }
+
+      markUsedLetters(usedLetters);
     });
   }
+}
+
+function markUsedLetters(array) {
+  const keyboardKeys = document.querySelectorAll(".keyboard__key");
+
+  keyboardKeys.forEach((key, index) => {
+    const value = key.getAttribute("value");
+
+    if (array.includes(value)) keyboardKeys[index].classList.add("used");
+  });
 }
 
 function checkIfWon(word) {

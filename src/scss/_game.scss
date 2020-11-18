@@ -212,6 +212,11 @@
       transition: background-color 0.3s ease-out, color 0.4s ease-in;
       cursor: pointer;
 
+      &.used {
+        pointer-events: none;
+        opacity: .2;
+      }
+
       &:hover {
         color: lighten($secondary-color, 60%);
         background-color: darken($primary-color, 20%);
