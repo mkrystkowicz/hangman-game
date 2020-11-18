@@ -1,5 +1,6 @@
 import gsap from "gsap/gsap-core";
 import endGame from "./endGame";
+import animateHangman from "./animateHangman";
 
 export default function initGame(object) {
   const { word, definitions } = object;
@@ -11,6 +12,7 @@ export default function initGame(object) {
   updateDefinition(wordDefinition);
   updateSecretWord(word);
   animateKeyboard();
+  animateHangman(playerLifes);
 
   const keyboard = document.querySelector(".keyboard");
 
@@ -21,6 +23,7 @@ export default function initGame(object) {
 
     if (result === false) {
       playerLifes--;
+      animateHangman(playerLifes);
       const gameResult = checkLifes(playerLifes, word);
       gameIsOver = gameResult;
     } else {

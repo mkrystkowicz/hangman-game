@@ -70,6 +70,19 @@
     @include breakpoint(wide) {
       transform: scale(2);
     }
+
+    #gallows-legs,
+    #stem,
+    #pillar,
+    #crossbeam,
+    #line,
+    #hangman-head,
+    #hangman-torso,
+    #hangman-left-arm,
+    #hangman-right-arm,
+    #hangman-legs{
+      opacity: 0;
+    }
   }
   .definition-box {
     position: relative;
@@ -88,7 +101,7 @@
     span {
       text-align: center;
       margin: 0 auto;
-      font-size: .6rem;
+      font-size: 0.6rem;
       letter-spacing: 4px;
 
       @include breakpoint(med) {
