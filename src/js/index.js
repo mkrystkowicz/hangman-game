@@ -1,7 +1,6 @@
 import showGameInfo from "./showGameInfo";
 import startGame from "./startGame";
 import "../scss/main.scss";
-import animateHangman from "./animateHangman";
 
 window.addEventListener("DOMContentLoaded", () => {
   const gameStartBtn = document.querySelector(".game-start-btn");

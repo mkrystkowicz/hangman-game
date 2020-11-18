@@ -34,9 +34,10 @@ export default function initGame(object) {
   window.addEventListener("keydown", ({ key: letter }) => {
     if (!letter || gameIsOver) return;
     let result = checkLetter(letter, word);
-
+    
     if (result === false) {
       playerLifes--;
+      animateHangman(playerLifes);
       const gameResult = checkLifes(playerLifes, word);
       gameIsOver = gameResult;
     } else {
