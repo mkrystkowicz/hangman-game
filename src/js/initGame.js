@@ -39,11 +39,11 @@ export default function initGame(object) {
       markUsedLetters(usedLetters);
     });
     window.addEventListener("keypress", ({ key: letter, keyCode, which }) => {
-      if (keyCode >= 97 && keyCode <= 122) {
+      if ((keyCode >= 97 && keyCode <= 122) || (which >= 97 && which <= 122)) {
         if (!letter || gameIsOver) return;
 
         usedLetters.push(letter);
-      
+
         let result = checkLetter(letter, word);
 
         if (result === false) {

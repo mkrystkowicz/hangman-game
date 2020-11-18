@@ -4,6 +4,7 @@ import getWordDefinitions from "./getWordDefinitions";
 
 export default function startGame() {
   scrollToGame();
+  removeTabIndex();
 
   const logoContainer = document.querySelector(".game__header .logo-container");
   
@@ -28,6 +29,13 @@ function scrollToGame() {
     gameHeader,
     { duration: 0.3, opacity: 1, y: 0 }
   );
+}
+
+function removeTabIndex() {
+  const header = document.querySelector(".header");
+  const buttons = header.querySelectorAll(".btn");
+
+  buttons.forEach((btn) => btn.setAttribute("tabindex", "-1"));
 }
 
 function restartGame(){
