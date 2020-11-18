@@ -16,35 +16,39 @@ export default function initGame(object) {
 
   const keyboard = document.querySelector(".keyboard");
 
-  keyboard.addEventListener("click", ({ target }) => {
-    const letter = target.getAttribute("value");
-    if (!letter) return;
-    let result = checkLetter(letter, word);
+  setTimeout(() => listenForEvents(), 2000);
 
-    if (result === false) {
-      playerLifes--;
-      animateHangman(playerLifes);
-      const gameResult = checkLifes(playerLifes, word);
-      gameIsOver = gameResult;
-    } else {
-      const gameResult = checkLifes(playerLifes, word);
-      gameIsOver = gameResult;
-    }
-  });
-  window.addEventListener("keydown", ({ key: letter }) => {
-    if (!letter || gameIsOver) return;
-    let result = checkLetter(letter, word);
-    
-    if (result === false) {
-      playerLifes--;
-      animateHangman(playerLifes);
-      const gameResult = checkLifes(playerLifes, word);
-      gameIsOver = gameResult;
-    } else {
-      const gameResult = checkLifes(playerLifes, word);
-      gameIsOver = gameResult;
-    }
-  });
+  function listenForEvents() {
+    keyboard.addEventListener("click", ({ target }) => {
+      const letter = target.getAttribute("value");
+      if (!letter) return;
+      let result = checkLetter(letter, word);
+
+      if (result === false) {
+        playerLifes--;
+        animateHangman(playerLifes);
+        const gameResult = checkLifes(playerLifes, word);
+        gameIsOver = gameResult;
+      } else {
+        const gameResult = checkLifes(playerLifes, word);
+        gameIsOver = gameResult;
+      }
+    });
+    window.addEventListener("keydown", ({ key: letter }) => {
+      if (!letter || gameIsOver) return;
+      let result = checkLetter(letter, word);
+
+      if (result === false) {
+        playerLifes--;
+        animateHangman(playerLifes);
+        const gameResult = checkLifes(playerLifes, word);
+        gameIsOver = gameResult;
+      } else {
+        const gameResult = checkLifes(playerLifes, word);
+        gameIsOver = gameResult;
+      }
+    });
+  }
 }
 
 function checkIfWon(word) {
@@ -110,7 +114,7 @@ function updateDefinition(wordDefinition) {
     { opacity: 0, y: "-100" },
     { duration: 0.3, opacity: 1, y: 0 }
   );
-  
+
   definitionText.textContent = wordDefinition;
 }
 
