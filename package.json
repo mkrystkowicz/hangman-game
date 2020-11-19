@@ -11,7 +11,8 @@
     "postcss-modules": "^3.2.2",
     "posthtml": "^0.13.4",
     "posthtml-img-autosize": "^0.1.6",
-    "sass": "^1.27.0"
+    "sass": "^1.27.0",
+    "scss": "^0.2.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
@@ -25,7 +26,7 @@
   },
   "scripts": {
     "dev": "parcel src/index.html",
-    "prod": "parcel build src/index.html ../build/output"
+    "prod": "parcel build src/index.html ../build/output --public-url ./"
   },
   "repository": {
     "type": "git",
