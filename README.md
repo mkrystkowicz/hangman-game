@@ -1,3 +1,3 @@
 # Hangman project
 
-## Try it yourself - npm init -> npm run dev
+## Try it yourself - npm install -> npm run dev
