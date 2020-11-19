@@ -11,10 +11,10 @@ export default async function getWordDefinitions(array) {
       headers: {
         "x-rapidapi-key": "36f59234bbmsh7b4735ef7b515f9p16ed44jsn3ac5dedfd81e",
         "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
+        "Content-Type": "application/json",
       },
     });
     const data = await response.json();
-
     return initGame(data);
   } catch (err) {
     startGame();
