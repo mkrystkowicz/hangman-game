@@ -5,7 +5,7 @@ import initGame from "./initGame";
 
 export default function startGame() {
   scrollToGame();
-  removeTabIndex();
+  disableButtons();
 
   const logoContainer = document.querySelector(".game__header .logo-container");
 
@@ -39,11 +39,11 @@ function scrollToGame() {
   );
 }
 
-function removeTabIndex() {
+function disableButtons() {
   const header = document.querySelector(".header");
   const buttons = header.querySelectorAll(".btn");
 
-  buttons.forEach((btn) => btn.setAttribute("tabindex", "-1"));
+  buttons.forEach((btn) => btn.setAttribute("disabled", "1"));
 }
 
 function restartGame(){
