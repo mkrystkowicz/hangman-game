@@ -1,5 +1,3 @@
-import initGame from "./initGame";
-import startGame from "./startGame";
 
 export default async function getWordDefinitions(array) {
   const [word] = array;
@@ -15,9 +13,9 @@ export default async function getWordDefinitions(array) {
       },
     });
     const data = await response.json();
-    return initGame(data);
+
+    return data;
   } catch (err) {
-    startGame();
     throw new Error("Could not get word definition", err);
   }
 }

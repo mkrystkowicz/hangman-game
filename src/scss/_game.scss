@@ -52,17 +52,14 @@
     justify-content: center;
     text-align: center;
     height: 30vh;
-
+    
     @include breakpoint(large) {
       grid-area: hangman;
     }
   }
   .hangman svg {
-    width: 60%;
+    width: 40%;
 
-    @include breakpoint(med) {
-      width: 80%;
-    }
     @include breakpoint(large) {
       align-self: center;
       transform: scale(1.3);

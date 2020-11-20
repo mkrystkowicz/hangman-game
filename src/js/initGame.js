@@ -3,6 +3,7 @@ import endGame from "./endGame";
 import animateHangman from "./animateHangman";
 
 export default function initGame(object) {
+  console.log(object);
   const { word, definitions } = object;
   const { definition: wordDefinition } = getWordDefinition(definitions);
   const usedLetters = [];

@@ -1,16 +1,16 @@
 import gsap from "gsap/gsap-core";
 
 export default function animateHangman(currentLife) {
-  const gallowLegs = document.querySelector("#gallows-legs");
-  const stem = document.querySelector("#stem");
-  const pillar = document.querySelector("#pillar");
-  const crossbeam = document.querySelector("#crossbeam");
-  const line = document.querySelector("#line");
-  const hangmanHead = document.querySelector("#hangman-head");
-  const hangmanTorso = document.querySelector("#hangman-torso");
-  const hangmanLeftArm = document.querySelector("#hangman-left-arm");
-  const hangmanRightArm = document.querySelector("#hangman-right-arm");
-  const hangmanLegs = document.querySelector("#hangman-legs");
+  const gallowLegs = document.getElementById("gallows-legs");
+  const stem = document.getElementById("stem");
+  const pillar = document.getElementById("pillar");
+  const crossbeam = document.getElementById("crossbeam");
+  const line = document.getElementById("line");
+  const hangmanHead = document.getElementById("hangman-head");
+  const hangmanTorso = document.getElementById("hangman-torso");
+  const hangmanLeftArm = document.getElementById("hangman-left-arm");
+  const hangmanRightArm = document.getElementById("hangman-right-arm");
+  const hangmanLegs = document.getElementById("hangman-legs");
 
   switch (currentLife) {
     case 10:

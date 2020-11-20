@@ -1,14 +1,22 @@
 import gsap from "gsap";
 import getRandomWord from "./randomWord";
 import getWordDefinitions from "./getWordDefinitions";
+import initGame from "./initGame";
 
 export default function startGame() {
   scrollToGame();
   removeTabIndex();
 
   const logoContainer = document.querySelector(".game__header .logo-container");
-  
-  getRandomWord().then((data) => getWordDefinitions(data));
+
+  getRandomWord()
+    .then((data) => getWordDefinitions(data))
+    .then((wordDefsObj) => {
+      if (!wordDefsObj.definitions) {
+        console.log("nop");
+        startGame();
+      } else initGame(wordDefsObj);
+    });
 
   logoContainer.addEventListener("click", () => restartGame());
 }
