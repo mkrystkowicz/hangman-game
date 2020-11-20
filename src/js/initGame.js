@@ -3,7 +3,6 @@ import endGame from "./endGame";
 import animateHangman from "./animateHangman";
 
 export default function initGame(object) {
-  console.log(object);
   const { word, definitions } = object;
   const { definition: wordDefinition } = getWordDefinition(definitions);
   const usedLetters = [];
@@ -81,7 +80,10 @@ function checkIfWon(word) {
     el.textContent.toLowerCase()
   );
 
-  if (word.toLowerCase() === secretWordLettersArray.join("")) endGame("win");
+  if (word.toLowerCase() === secretWordLettersArray.join("")) {
+    endGame("win");
+    return true;
+  }
 }
 
 const checkLifes = (lifes, word) =>
