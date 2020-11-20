@@ -22,7 +22,7 @@ export default function initGame(object) {
   function listenForEvents() {
     keyboard.addEventListener("click", ({ target }) => {
       const letter = target.getAttribute("value");
-      if (!letter) return;
+      if (!letter || gameIsOver || usedLetters.includes(letter)) return;
       usedLetters.push(letter);
       let result = checkLetter(letter, word);
 
@@ -40,8 +40,7 @@ export default function initGame(object) {
     });
     window.addEventListener("keypress", ({ key: letter, keyCode, which }) => {
       if ((keyCode >= 97 && keyCode <= 122) || (which >= 97 && which <= 122)) {
-        console.log(keyCode);
-        if (!letter || gameIsOver) return;
+        if (!letter || gameIsOver || usedLetters.includes(letter)) return;
 
         usedLetters.push(letter);
 
