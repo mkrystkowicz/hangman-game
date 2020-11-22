@@ -1,3 +1,4 @@
+import startGame from "./startGame";
 
 export default async function getWordDefinitions(array) {
   const [word] = array;

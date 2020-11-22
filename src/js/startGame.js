@@ -9,16 +9,33 @@ export default function startGame() {
 
   const logoContainer = document.querySelector(".game__header .logo-container");
 
+  randomWordAndDefinitions();
+
+  logoContainer.addEventListener("click", () => restartGame());
+}
+
+function randomWordAndDefinitions() {
   getRandomWord()
     .then((data) => getWordDefinitions(data))
     .then((wordDefsObj) => {
-      if (!wordDefsObj.definitions) {
-        console.log("nop");
-        startGame();
-      } else initGame(wordDefsObj);
+      console.log(wordDefsObj);
+      if (wordDefsObj.hasOwnProperty("success")) {
+        randomWordAndDefinitions();
+      } else if (
+        wordDefsObj.hasOwnProperty("definitions") &&
+        wordDefsObj.definitions.length > 0
+      ) {
+        initGame(wordDefsObj);
+      } else {
+        randomWordAndDefinitions();
+      }
     });
-
-  logoContainer.addEventListener("click", () => restartGame());
+  // if (wordDefsObj.definitions.length > 0) {
+  //   initGame(wordDefsObj);
+  // } else {
+  //   randomWordAndDefinitions();
+  // }
+  // };);
 }
 
 function scrollToGame() {
@@ -33,10 +50,7 @@ function scrollToGame() {
     left: 0,
     behavior: "smooth",
   });
-  tl.to(
-    gameHeader,
-    { duration: 0.3, opacity: 1, y: 0 }
-  );
+  tl.to(gameHeader, { duration: 0.3, opacity: 1, y: 0 });
 }
 
 function disableButtons() {
@@ -46,6 +60,6 @@ function disableButtons() {
   buttons.forEach((btn) => btn.setAttribute("disabled", "1"));
 }
 
-function restartGame(){
-   window.location.assign(window.location.href)
-};
+function restartGame() {
+  window.location.assign(window.location.href);
+}
