@@ -18,7 +18,6 @@ function randomWordAndDefinitions() {
   getRandomWord()
     .then((data) => getWordDefinitions(data))
     .then((wordDefsObj) => {
-      console.log(wordDefsObj);
       if (wordDefsObj.hasOwnProperty("success")) {
         randomWordAndDefinitions();
       } else if (
@@ -30,12 +29,6 @@ function randomWordAndDefinitions() {
         randomWordAndDefinitions();
       }
     });
-  // if (wordDefsObj.definitions.length > 0) {
-  //   initGame(wordDefsObj);
-  // } else {
-  //   randomWordAndDefinitions();
-  // }
-  // };);
 }
 
 function scrollToGame() {
