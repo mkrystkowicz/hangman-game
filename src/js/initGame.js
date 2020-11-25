@@ -4,7 +4,8 @@ import animateHangman from "./animateHangman";
 
 export default function initGame(object) {
   const { word, definitions } = object;
-  const { definition: wordDefinition } = getWordDefinition(definitions);
+  // const { definition: wordDefinition } = getWordDefinition(definitions);
+  const wordDefinition = getWordDefinition(definitions);
   const usedLetters = [];
 
   let gameIsOver = false;
@@ -124,9 +125,12 @@ function checkLength(array) {
 }
 
 function getWordDefinition(definitions) {
-  const index = Math.floor(Math.random() * definitions.length);
+  const newDefinitionsArray = [];
 
-  return definitions[index];
+  definitions.forEach((el) => newDefinitionsArray.push(el.definition));
+  newDefinitionsArray.sort((a, b) => a.length - b.length);
+  
+  return newDefinitionsArray[0];
 }
 
 function updateDefinition(wordDefinition) {
