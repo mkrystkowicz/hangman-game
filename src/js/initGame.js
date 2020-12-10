@@ -1,12 +1,14 @@
 import gsap from "gsap/gsap-core";
 import endGame from "./endGame";
 import animateHangman from "./animateHangman";
+import loadingAnimation from "./loadingAnimation";
 
 export default function initGame(object) {
   const { word, definitions } = object;
-  // const { definition: wordDefinition } = getWordDefinition(definitions);
   const wordDefinition = getWordDefinition(definitions);
   const usedLetters = [];
+
+  loadingAnimation(false);
 
   let gameIsOver = false;
   let playerLifes = 10;

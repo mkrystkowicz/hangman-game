@@ -2,10 +2,13 @@ import gsap from "gsap";
 import getRandomWord from "./randomWord";
 import getWordDefinitions from "./getWordDefinitions";
 import initGame from "./initGame";
+import loadingAnimation from "./loadingAnimation";
 
 export default function startGame() {
   scrollToGame();
   disableButtons();
+
+  loadingAnimation(true);
 
   const logoContainer = document.querySelector(".game__header .logo-container");
 
