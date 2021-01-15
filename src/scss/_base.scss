@@ -1,9 +1,9 @@
 $breakpoints: (
-  "small": 320px,
-  "med": 620px,
-  "large": 770px,
-  "wide": 1400px,
-  "mega": 2000px,
+  'small': 320px,
+  'med': 620px,
+  'large': 770px,
+  'wide': 1400px,
+  'mega': 2000px,
 );
 
 @mixin breakpoint($bp, $rule: min-width) {
@@ -15,6 +15,7 @@ $breakpoints: (
 $primary-color: #c4c4c4;
 $secondary-color: #2e2e2e;
 $base-color: #aaa;
+$border-medium: 3px;
 
 .unselectable {
   pointer-events: none;
