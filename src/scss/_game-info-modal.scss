@@ -1,34 +1,35 @@
 .game-info {
+  width: 80vw;
+  height: auto;
   opacity: 0;
   pointer-events: none;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: opacity 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  @include breakpoint(large) {
+    width: 90vw;
+    height: 50vw;
+  }
+  @include breakpoint(wide) {
+    width: 50vw;
+    height: 30vw;
+  }
+  @include breakpoint(mega) {
+    width: 40vw;
+    height: 20vw;
+  }
 
   &--active {
     opacity: 1;
     pointer-events: all;
-    width: 80vw;
-    height: auto;
     transform: translate(-50%, -50%);
     background-color: $primary-color;
     z-index: 3;
     border-radius: $border-medium;
-
-    @include breakpoint(large) {
-      width: 90vw;
-      height: 50vw;
-    }
-    @include breakpoint(wide) {
-      width: 50vw;
-      height: 30vw;
-    }
-    @include breakpoint(mega) {
-      width: 40vw;
-      height: 20vw;
-    }
 
     .game-info__modal-container {
       width: 100%;
@@ -45,6 +46,7 @@
       height: 2rem;
       background-color: $secondary-color;
       border-radius: 50%;
+      outline: none;
 
       & i {
         color: $primary-color;
