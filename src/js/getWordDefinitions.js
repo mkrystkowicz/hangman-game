@@ -11,9 +11,8 @@ export default async function getWordDefinitions(array) {
         'Content-Type': 'application/json',
       },
     });
-    const data = await response.json();
 
-    return data;
+    return response.json();
   } catch (err) {
     throw new Error('Could not get word definition', err);
   }
