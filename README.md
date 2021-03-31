@@ -6,7 +6,7 @@
 
 ### --------------
 
-#### Check live -> https://mkrystkowicz.github.io/hangman-game/
+#### Check live -> https://hungry-sinoussi-5dd3e3.netlify.app
 
 ### --------------
 
