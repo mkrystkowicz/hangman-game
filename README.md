@@ -6,7 +6,7 @@
 
 ### --------------
 
-#### Check live -> https://hungry-sinoussi-5dd3e3.netlify.app
+#### Check live -> https://tender-heyrovsky-a1bec0.netlify.app/
 
 ### --------------
 
@@ -14,4 +14,4 @@
 
 ### --------------
 
-###### This project is 100% designed and coded by me. 
+###### This project is 100% designed and coded by me.
