@@ -1,60 +1,65 @@
 .end-game-modal {
-    opacity: 0;
-    pointer-events: none;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: $secondary-color;
+  color: $primary-color;
+  transition: all 0.3s ease-in;
+
+  &--active {
+    opacity: 1;
+    pointer-events: all;
     position: fixed;
     width: 100vw;
     height: 100%;
     top: 0;
     left: 0;
-    background-color: $secondary-color;
+    background-color: rgba($secondary-color, 0.95);
     color: $primary-color;
-    transition: all .3s ease-in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    &--active {
-        opacity: 1;
-        pointer-events: all;
-        position: fixed;
-        width: 100vw;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: rgba($secondary-color, 0.95);
-        color: $primary-color;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+  .end-game-modal__title {
+    opacity: 0;
+    font-size: 4rem;
+
+    @include breakpoint(large) {
+      font-size: 8rem;
+    }
+  }
+
+  .end-game-modal__game-word {
+    margin: 1rem;
+    font-size: 1.4rem;
+  }
+
+  .end-game-modal__subtitle {
+    opacity: 0;
+    margin-top: -0.3rem;
+
+    @include breakpoint(large) {
+      margin-top: -0.8rem;
+      font-size: 1rem;
+    }
+  }
+
+  .end-game-modal__button {
+    opacity: 0;
+    margin-top: 1rem;
+
+    @include breakpoint(med) {
+      font-size: 1.4rem;
     }
 
-    .end-game-modal__title {
-        opacity: 0;
-        font-size: 4rem;
-
-        @include breakpoint(large) {
-            font-size: 8rem;
-        }
+    @include breakpoint(mega) {
+      font-size: 2.4rem;
     }
-    
-    .end-game-modal__subtitle {
-        opacity: 0;
-        margin-top: -0.3rem;
-
-        @include breakpoint(large) {
-            margin-top: -0.8rem;
-            font-size: 1rem;
-        }
-    }
-
-    .end-game-modal__button {
-        opacity: 0;
-        margin-top: 1rem;
-
-        @include breakpoint(med) {
-            font-size: 1.4rem;
-        }
-
-        @include breakpoint(mega) {
-            font-size: 2.4rem;
-        }
-    }
+  }
 }

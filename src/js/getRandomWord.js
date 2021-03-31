@@ -1,5 +1,5 @@
 export default async function randomWord() {
-  const randomWordURL = "https://random-words-api.herokuapp.com/w?n=1/";
+  const randomWordURL = 'https://random-words-api.herokuapp.com/w?n=1/';
 
   try {
     const response = await fetch(randomWordURL);
@@ -7,6 +7,6 @@ export default async function randomWord() {
 
     return data;
   } catch (err) {
-    throw new Error("Could not get word", err);
+    throw new Error('Could not get word', err);
   }
-};
+}
