@@ -1,6 +1,5 @@
 import gsap from 'gsap';
-import getRandomWord from './getRandomWord';
-import getWordDefinitions from './getWordDefinitions';
+import api from './api';
 import initGame from './initGame';
 import loadingAnimation from './loadingAnimation';
 
@@ -16,10 +15,24 @@ export default function startGame() {
 
   logoContainer.addEventListener('click', () => restartGame());
 }
-
 export async function randomWordAndDefinitions() {
-  await getRandomWord()
-    .then(data => getWordDefinitions(data))
+  await api('https://random-words-api.herokuapp.com/w?n=1/')
+    .then(data => {
+      const randomNumber = Math.floor(Math.random() * data.length);
+      const randomWord = data[randomNumber];
+
+      return api(
+        `https://wordsapiv1.p.rapidapi.com/words/${randomWord}/definitions`,
+        {
+          method: 'GET',
+          headers: {
+            'x-rapidapi-key': process.env.WORD_DEFINITION_API_KEY,
+            'x-rapidapi-host': 'wordsapiv1.p.rapidapi.com',
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+    })
     .then(wordDefsObj => {
       if (wordDefsObj.hasOwnProperty('success')) {
         randomWordAndDefinitions();
@@ -28,8 +41,6 @@ export async function randomWordAndDefinitions() {
         wordDefsObj.definitions.length > 0
       ) {
         initGame(wordDefsObj);
-      } else {
-        randomWordAndDefinitions();
       }
     });
 }

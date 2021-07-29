@@ -5,7 +5,7 @@ import loadingAnimation from './loadingAnimation';
 
 export default function initGame(object) {
   const { word, definitions } = object;
-  const wordDefinition = getWordDefinition(definitions);
+  const wordDefinition = getShortestWordDefinition(definitions);
   const usedLetters = [];
 
   loadingAnimation(false);
@@ -126,7 +126,7 @@ function checkLength(array) {
   return accumulator;
 }
 
-function getWordDefinition(definitions) {
+function getShortestWordDefinition(definitions) {
   const newDefinitionsArray = [];
 
   definitions.forEach(el => newDefinitionsArray.push(el.definition));
