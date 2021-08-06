@@ -237,10 +237,14 @@
         background-color: darken($primary-color, 20%);
       }
 
+      @include breakpoint(large-phone) {
+        width: 1.4rem;
+        height: 1.4rem;
+        font-size: 0.8rem;
+      }
       @include breakpoint(med) {
         width: 1.6rem;
         height: 1.6rem;
-        font-size: 0.8rem;
       }
       @include breakpoint(large) {
         margin: 0.3rem;
@@ -254,7 +258,6 @@
         padding: 0.3rem;
         width: 1.8rem;
         height: 1.8rem;
-        font-size: 1.2rem;
       }
       @include breakpoint(large) {
         width: 2.2rem;
