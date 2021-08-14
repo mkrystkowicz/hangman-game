@@ -238,13 +238,9 @@
       }
 
       @include breakpoint(large-phone) {
-        width: 1.4rem;
-        height: 1.4rem;
-        font-size: 0.8rem;
-      }
-      @include breakpoint(med) {
         width: 1.6rem;
         height: 1.6rem;
+        font-size: 0.8rem;
       }
       @include breakpoint(large) {
         margin: 0.3rem;
