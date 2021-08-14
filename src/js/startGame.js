@@ -1,9 +1,10 @@
 import gsap from 'gsap';
-import api from './api';
-import initGame from './initGame';
 import loadingAnimation from './loadingAnimation';
+import initGame from './initGame';
+import randomWordAndDefinitions from './randomWordAndDefinitions';
+import showError from './showError';
 
-export default function startGame() {
+export default async function startGame() {
   scrollToGame();
   disableButtons();
 
@@ -11,38 +12,13 @@ export default function startGame() {
 
   const logoContainer = document.querySelector('.game__header .logo-container');
 
-  randomWordAndDefinitions();
+  randomWordAndDefinitions()
+    .then(data => {
+      initGame(data);
+    })
+    .catch(err => showError(err.message));
 
   logoContainer.addEventListener('click', () => restartGame());
-}
-export async function randomWordAndDefinitions() {
-  await api('https://random-words-api.herokuapp.com/w?n=1/')
-    .then(data => {
-      const randomNumber = Math.floor(Math.random() * data.length);
-      const randomWord = data[randomNumber];
-
-      return api(
-        `https://wordsapiv1.p.rapidapi.com/words/${randomWord}/definitions`,
-        {
-          method: 'GET',
-          headers: {
-            'x-rapidapi-key': process.env.WORD_DEFINITION_API_KEY,
-            'x-rapidapi-host': 'wordsapiv1.p.rapidapi.com',
-            'Content-Type': 'application/json',
-          },
-        }
-      );
-    })
-    .then(wordDefsObj => {
-      if (wordDefsObj.hasOwnProperty('success')) {
-        randomWordAndDefinitions();
-      } else if (
-        wordDefsObj.hasOwnProperty('definitions') &&
-        wordDefsObj.definitions.length > 0
-      ) {
-        initGame(wordDefsObj);
-      }
-    });
 }
 
 function scrollToGame() {
