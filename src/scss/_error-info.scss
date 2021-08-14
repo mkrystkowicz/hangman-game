@@ -1,0 +1,36 @@
+.error-info {
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease-in;
+
+  &--active {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    pointer-events: all;
+    transform: translate(-50%, -50%);
+    background-color: $primary-color;
+    z-index: 3;
+    border-radius: $border-medium;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 80vw;
+    padding: 3rem 2.5rem;
+    max-width: 400px;
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: red;
+  }
+
+  &__button {
+    background-color: $secondary-color;
+    color: $primary-color;
+  }
+}
