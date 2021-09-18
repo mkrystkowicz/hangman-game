@@ -23,7 +23,23 @@
     img {
       width: 40%;
 
-      @include breakpoint(mega) {
+      @include breakpoint(small, landscape) {
+        width: 20%;
+      }
+
+      @include breakpoint(large, portrait) {
+        width: 40%;
+      }
+
+      @include breakpoint(laptop-small, portrait) {
+        width: 60%;
+      }
+
+      @include breakpoint(laptop-small, landscape) {
+        width: 50%;
+      }
+
+      @include breakpoint(mega, landscape) {
         width: 70%;
       }
     }
@@ -37,17 +53,70 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    pointer-events: none;
 
-    @include breakpoint(large) {
+    @include breakpoint(small, landscape) {
+      width: 100%;
+      display: grid;
+      grid-template-rows: 2fr 1fr 1fr 1fr 2fr;
+      grid-template-columns: 3fr 4fr;
+      align-content: center;
+      grid-template-areas:
+        ". ."
+        "hangman category"
+        "hangman word"
+        "hangman keyboard"
+        ". .";
+    }
+
+    @include breakpoint(large, portrait) {
+      width: 100%;
+      display: grid;
+      align-content: center;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 10fr 4fr 1fr;
+      grid-template-areas:
+        ". . ."
+        "hangman category ."
+        "hangman word ."
+        "hangman keyboard ."
+        ". . .";
+    }
+
+    @include breakpoint(large, landscape) {
+      width: 100%;
+      display: grid;
+      align-content: center;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 7fr 7fr 1fr;
+      grid-template-areas:
+        ". hangman category ."
+        ". hangman word ."
+        ". hangman keyboard .";
+    }
+
+    @include breakpoint(laptop-small, portrait) {
+      width: 100%;
+      display: grid;
+      grid-template-rows: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 5fr 2fr 1fr;
+      align-content: center;
+      grid-template-areas:
+        ". hangman category ."
+        ". hangman word ."
+        ". hangman keyboard .";
+    }
+
+    @include breakpoint(wide, landscape) {
       width: 100%;
       display: grid;
       grid-template-rows: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 2fr 2fr 1fr;
+      grid-template-columns: 1fr 10fr 10fr 1fr;
       align-content: center;
       grid-template-areas:
-        '. hangman category .'
-        '. hangman word .'
-        '. hangman keyboard .';
+        ". hangman category ."
+        ". hangman word ."
+        ". hangman keyboard .";
     }
   }
   .hangman {
@@ -56,23 +125,39 @@
     justify-content: center;
     text-align: center;
 
-    @include breakpoint(large) {
+    @include breakpoint(small, landscape) {
+      grid-area: hangman;
+    }
+
+    @include breakpoint(large, portrait) {
       grid-area: hangman;
     }
   }
   .hangman svg {
-    @include breakpoint(small) {
-      align-self: center;
+    align-self: center;
+
+    @include breakpoint(small, portrait) {
+      transform: scale(0.6);
+    }
+    @include breakpoint(small, landscape) {
       transform: scale(0.8);
     }
-    @include breakpoint(large) {
-      align-self: center;
-      transform: scale(1.3);
+    @include breakpoint(med, landscape) {
+      transform: scale(1);
     }
-    @include breakpoint(wide) {
+    @include breakpoint(large, landscape) {
+      transform: scale(1.2);
+    }
+    @include breakpoint(large, portrait) {
+      transform: scale(1.2);
+    }
+    @include breakpoint(laptop-small, portrait) {
+      transform: scale(1.6);
+    }
+    @include breakpoint(wide, landscape) {
       transform: scale(2);
     }
-    @include breakpoint(mega) {
+    @include breakpoint(mega, landscape) {
       transform: scale(2.4);
     }
 
@@ -103,19 +188,63 @@
     transform: translateY(-100%);
     opacity: 0;
 
+    @include breakpoint(small, landscape) {
+      max-width: 100%;
+      height: auto;
+      grid-area: category;
+    }
+
+    @include breakpoint(med, portrait) {
+      height: auto;
+      grid-area: category;
+    }
+
+    @include breakpoint(large, landscape) {
+      width: 70%;
+      height: auto;
+      grid-area: category;
+    }
+
+    @include breakpoint(large, portrait) {
+      width: 70%;
+      height: auto;
+      grid-area: category;
+    }
+
+    @include breakpoint(laptop-small, landscape) {
+      width: 70%;
+    }
+
+    @include breakpoint(laptop-small, portrait) {
+      width: 100%;
+    }
+
+    @include breakpoint(wide, landscape) {
+      width: 100%;
+    }
+
     span {
       text-align: center;
       margin: 0 auto;
       font-size: 0.6rem;
       letter-spacing: 4px;
 
-      @include breakpoint(med) {
+      @include breakpoint(small, landscape) {
+        font-size: 0.5rem;
+      }
+      @include breakpoint(med, landscape) {
         font-size: 0.7rem;
       }
-      @include breakpoint(wide) {
-        font-size: 0.8rem;
+      @include breakpoint(med, portrait) {
+        font-size: 0.9rem;
       }
-      @include breakpoint(mega) {
+      @include breakpoint(laptop-small, portrait) {
+        font-size: 1.2rem;
+      }
+      @include breakpoint(wide, landscape) {
+        font-size: 1.1rem;
+      }
+      @include breakpoint(mega, landscape) {
         font-size: 1.2rem;
         padding: 0.2rem;
       }
@@ -123,7 +252,7 @@
 
     &::before {
       position: absolute;
-      content: 'definition';
+      content: "definition";
       background-color: $secondary-color;
       padding: 5px 10px;
       top: 0;
@@ -131,18 +260,15 @@
       transform: translateY(-50%);
       font-size: 0.5rem;
 
-      @include breakpoint(wide) {
-        font-size: 0.5rem;
-      }
-      @include breakpoint(mega) {
+      @include breakpoint(laptop-small, portrait) {
         font-size: 0.7rem;
       }
-    }
-
-    @include breakpoint(large) {
-      width: 50%;
-      height: auto;
-      grid-area: category;
+      @include breakpoint(wide, landscape) {
+        font-size: 0.7rem;
+      }
+      @include breakpoint(mega, landscape) {
+        font-size: 0.7rem;
+      }
     }
   }
   .secret-word {
@@ -155,13 +281,47 @@
     align-items: center;
     justify-content: space-evenly;
 
+    @include breakpoint(small, landscape) {
+      grid-area: word;
+      width: 50%;
+    }
+
+    @include breakpoint(large, landscape) {
+      grid-area: word;
+    }
+
+    @include breakpoint(large, portrait) {
+      grid-area: word;
+    }
+
     &__letter {
       text-align: center;
       padding: 0.3rem 0.5rem;
       position: relative;
 
+      @include breakpoint(med, landscape) {
+        font-size: 1.1rem;
+      }
+      @include breakpoint(med, portrait) {
+        font-size: 1.3rem;
+      }
+      @include breakpoint(large, landscape) {
+        font-size: 1.3rem;
+      }
+      @include breakpoint(laptop-small, portrait) {
+        font-size: 1.6rem;
+        padding: 0.2rem 1rem;
+      }
+      @include breakpoint(wide, landscape) {
+        font-size: 2rem;
+        padding: 0.6rem 0.8rem;
+      }
+      @include breakpoint(mega, landscape) {
+        font-size: 2rem;
+      }
+
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         display: block;
         background-color: $primary-color;
@@ -171,40 +331,45 @@
         left: 50%;
         transform: translateX(-50%);
 
-        @include breakpoint(wide) {
+        @include breakpoint(small, landscape) {
+          width: 100%;
+          left: 0;
+          transform: none;
+        }
+
+        @include breakpoint(wide, landscape) {
           width: 100%;
           left: 0;
           transform: none;
         }
       }
-
-      @include breakpoint(med) {
-        font-size: 1.4rem;
-      }
-      @include breakpoint(wide) {
-        padding: 0.2rem 0.4rem;
-      }
-      @include breakpoint(mega) {
-        font-size: 2rem;
-      }
-    }
-
-    @include breakpoint(large) {
-      grid-area: word;
-    }
-    @include breakpoint(wide) {
-      max-width: 80%;
-      font-size: 2.2rem;
-      justify-content: space-between;
-      margin: 0 20%;
     }
   }
+
   .keyboard {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     z-index: 1;
+    pointer-events: all;
+
+    @include breakpoint(small, landscape) {
+      grid-area: keyboard;
+    }
+
+    @include breakpoint(large, landscape) {
+      grid-area: keyboard;
+    }
+
+    @include breakpoint(large, portrait) {
+      grid-area: keyboard;
+    }
+
+    @include breakpoint(wide, landscape) {
+      margin: 0.1rem;
+      padding: 0.1rem;
+    }
 
     &__row {
       display: flex;
@@ -213,19 +378,67 @@
       justify-content: center;
       opacity: 0;
     }
+
     &__key {
       display: flex;
-      width: 1.2rem;
-      height: 1.2rem;
-      margin: 0.3rem;
-      padding: 0.3rem;
+      width: 1.4rem;
+      height: 1.4rem;
+      margin: 0.1rem;
+      padding: 0.1rem;
+      font-size: 1rem;
+      line-height: normal;
       color: $secondary-color;
       background-color: $primary-color;
       justify-content: center;
       align-self: center;
-      font-size: 0.6rem;
       transition: background-color 0.3s ease-out, color 0.4s ease-in;
       cursor: pointer;
+
+      @include breakpoint(large-phone, landscape) {
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 1rem;
+      }
+
+      @include breakpoint(large, landscape) {
+        width: 1.4rem;
+        height: 1.4rem;
+        font-size: 1rem;
+      }
+
+      @include breakpoint(large-phone, portrait) {
+        width: 1.6rem;
+        height: 1.6rem;
+        font-size: 1.2rem;
+      }
+
+      @include breakpoint(laptop-small, landscape) {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1.4rem;
+      }
+
+      @include breakpoint(wide, landscape) {
+        width: 2.6rem;
+        height: 2.6rem;
+        font-size: 1.8rem;
+      }
+
+      @include breakpoint(large, portrait) {
+        margin: 0.2rem;
+        padding: 0.2rem;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1.4rem;
+      }
+
+      @include breakpoint(laptop-small, portrait) {
+        margin: 0.3rem;
+        padding: 0.3rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        font-size: 1.8rem;
+      }
 
       &.used {
         pointer-events: none;
@@ -236,43 +449,10 @@
         color: lighten($secondary-color, 60%);
         background-color: darken($primary-color, 20%);
       }
-
-      @include breakpoint(large-phone) {
-        width: 1.6rem;
-        height: 1.6rem;
-        font-size: 0.8rem;
-      }
-      @include breakpoint(large) {
-        margin: 0.3rem;
-        padding: 0.3rem;
-        width: 1.8rem;
-        height: 1.8rem;
-        font-size: 1.2rem;
-      }
-      @include breakpoint(wide) {
-        margin: 0.3rem;
-        padding: 0.3rem;
-        width: 1.8rem;
-        height: 1.8rem;
-      }
-      @include breakpoint(large) {
-        width: 2.2rem;
-        height: 2.2rem;
-        margin: 0.6rem;
-        padding: 0.6rem;
-      }
-    }
-
-    @include breakpoint(large) {
-      grid-area: keyboard;
-    }
-    @include breakpoint(wide) {
-      margin: 0.2rem;
-      padding: 0.2rem;
     }
   }
   &::before {
-    content: '';
+    content: "";
     width: 100vw;
     height: 100%;
     background-image: url(../assets/wave.svg);
@@ -285,10 +465,5 @@
     left: 0;
     pointer-events: none;
     z-index: -1;
-
-    @include breakpoint(wide) {
-      height: 60%;
-      top: -50%;
-    }
   }
 }

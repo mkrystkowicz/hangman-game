@@ -17,7 +17,7 @@
     }
   }
 
-  @include breakpoint(wide) {
+  @include breakpoint(wide, landscape) {
     font-size: 0.8rem;
   }
 }

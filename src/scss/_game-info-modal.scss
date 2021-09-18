@@ -11,17 +11,24 @@
   transition: all 0.5s ease-in;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-  @include breakpoint(large) {
-    width: 90vw;
-    height: 50vw;
+  @include breakpoint(small, portrait) {
+    width: 85vw;
+    height: 70vh;
   }
-  @include breakpoint(wide) {
+
+  @include breakpoint(large-phone, landscape) {
+    width: 80vw;
+    height: 70vh;
+  }
+
+  @include breakpoint(large, portrait) {
     width: 50vw;
-    height: 30vw;
+    height: 50vh;
   }
-  @include breakpoint(mega) {
+
+  @include breakpoint(laptop-small, landscape) {
     width: 40vw;
-    height: 20vw;
+    height: 50vh;
   }
 
   &--active {
@@ -61,55 +68,111 @@
     }
 
     .game-info__container {
-      padding: 3rem 2.5rem;
+      padding: 1rem;
       width: 100%;
+
+      @include breakpoint(laptop-small, landscape) {
+        padding: 3rem 2.5rem;
+      }
+
+      @include breakpoint(laptop-small, portrait) {
+        padding: 3rem 2.5rem;
+      }
+
+      @include breakpoint(large, portrait) {
+        padding: 3rem 2.5rem;
+      }
 
       & .title {
         text-align: center;
-        font-size: 2rem;
+        font-size: 1.6rem;
 
-        @include breakpoint(large) {
-          font-size: 2.2rem;
+        @include breakpoint(large-phone, portrait) {
+          font-size: 2rem;
         }
-        @include breakpoint(mega) {
+
+        @include breakpoint(laptop-small, portrait) {
+          font-size: 2.4rem;
+        }
+
+        @include breakpoint(wide, landscape) {
           font-size: 2.6rem;
         }
       }
 
       & .description {
-        margin: 1.5rem 0;
-        font-size: 1rem;
+        margin: 1rem 0;
+        font-size: 0.8rem;
         text-align: center;
-        @include breakpoint(large) {
-          font-size: 1.2rem;
+
+        @include breakpoint(laptop-small, landscape) {
+          font-size: 1rem;
         }
-        @include breakpoint(mega) {
+
+        @include breakpoint(laptop-small, portrait) {
           font-size: 1.4rem;
+        }
+
+        @include breakpoint(wide, landscape) {
+          font-size: 1.2rem;
         }
       }
 
       & .rules-list {
-        font-size: 0.8rem;
+        margin: 1rem;
+        font-size: 0.7rem;
 
-        @include breakpoint(mega) {
-          font-size: 1.2rem;
+        @include breakpoint(large-phone, portrait) {
+          font-size: 0.8rem;
         }
 
+        @include breakpoint(laptop-small, landscape) {
+          font-size: 0.8rem;
+        }
+
+        @include breakpoint(laptop-small, portrait) {
+          font-size: 1rem;
+        }
+
+        @include breakpoint(wide, landscape) {
+          font-size: 1rem;
+        }
+
+        @include breakpoint(mega, landscape) {
+          font-size: 1.2rem;
+        }
         .rules-heading {
           text-align: center;
-          margin-bottom: 0.5rem;
-          font-size: 0.9rem;
+          margin: 2rem 0 1rem;
+          font-size: 0.7rem;
 
-          @include breakpoint(large) {
+          @include breakpoint(small, portrait) {
             font-size: 1rem;
           }
-          @include breakpoint(mega) {
+
+          @include breakpoint(large-phone, landscape) {
+            margin: 0;
+          }
+
+          @include breakpoint(laptop-small, landscape) {
+            font-size: 0.8rem;
+          }
+
+          @include breakpoint(laptop-small, portrait) {
+            font-size: 1rem;
+          }
+
+          @include breakpoint(wide, landscape) {
+            font-size: 1rem;
+          }
+
+          @include breakpoint(mega, landscape) {
             font-size: 1.4rem;
           }
         }
 
         li {
-          margin: 0.8rem;
+          margin: 0.4rem;
         }
       }
     }

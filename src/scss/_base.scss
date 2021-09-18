@@ -1,14 +1,15 @@
 $breakpoints: (
-  'small': 320px,
-  'large-phone': 400px,
-  'med': 620px,
-  'large': 770px,
-  'wide': 1400px,
-  'mega': 2000px,
+  "small": 320px,
+  "large-phone": 375px,
+  "med": 620px,
+  "large": 768px,
+  "laptop-small": 1024px,
+  "wide": 1366px,
+  "mega": 2000px,
 );
 
-@mixin breakpoint($bp, $rule: min-width) {
-  @media screen and (#{$rule}: map-get($breakpoints, $bp)) {
+@mixin breakpoint($bp, $orientation, $rule: min-width) {
+  @media screen and (orientation: $orientation) and (#{$rule}: map-get($breakpoints, $bp)) {
     @content;
   }
 }
