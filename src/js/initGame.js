@@ -74,7 +74,7 @@ function checkIfWon(word) {
   const secretWordLettersArray = secretWordLetters.map(el => el.textContent.toLowerCase());
 
   if (word.toLowerCase() === secretWordLettersArray.join('')) {
-    endGame('win');
+    endGame('win', word);
     return true;
   }
 }
