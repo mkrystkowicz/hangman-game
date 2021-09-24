@@ -30,7 +30,9 @@ export default function initGame(object) {
       handleUserAction(word, letter, usedLetters, gameStatus)
     });
 
-    window.addEventListener('keypress', ({ key: letter }) => {
+    window.addEventListener('keypress', (e) => {
+      const letter = e.key
+      const keyCode = e.keyCode
       if ((keyCode >= 97 && keyCode <= 122)) {
         handleUserAction(word, letter, usedLetters, gameStatus)
       }
