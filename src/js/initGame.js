@@ -11,15 +11,13 @@ export default function initGame(object) {
   console.log(word);
   loadingAnimation(false);
 
-  const gameStatus = {
-    gameIsOver: false,
-    playerLifes: 10,
-  };
+  let gameIsOver = false;
+  let playerLifes = 10;
 
   updateDefinition(wordDefinition);
   updateSecretWord(word);
   animateKeyboard();
-  animateHangman(gameStatus.playerLifes);
+  animateHangman(playerLifes);
 
   const keyboard = document.querySelector('.keyboard');
 
@@ -28,36 +26,45 @@ export default function initGame(object) {
   function listenForEvents() {
     keyboard.addEventListener('click', ({ target }) => {
       const letter = target.getAttribute('value');
-      handleUserAction(word, letter, usedLetters, gameStatus);
-    });
+      if (!letter || gameIsOver || usedLetters.includes(letter)) return;
+      usedLetters.push(letter);
+      let result = checkLetter(letter, word);
 
-    window.addEventListener('keypress', e => {
-      const letter = e.key;
-      const keyCode = e.keyCode;
-      if (keyCode >= 97 && keyCode <= 122) {
-        handleUserAction(word, letter, usedLetters, gameStatus);
+      if (result === false) {
+        playerLifes--;
+        animateHangman(playerLifes);
+        const gameResult = checkLifes(playerLifes, word);
+        gameIsOver = gameResult;
+      } else {
+        const gameResult = checkLifes(playerLifes, word);
+        gameIsOver = gameResult;
+      }
+
+      markUsedLetters(usedLetters);
+    });
+    window.addEventListener('keypress', ({ key: letter, keyCode, which }) => {
+      if ((keyCode >= 97 && keyCode <= 122) || (which >= 97 && which <= 122)) {
+        if (!letter || gameIsOver || usedLetters.includes(letter)) return;
+
+        usedLetters.push(letter);
+
+        let result = checkLetter(letter, word);
+
+        if (result === false) {
+          playerLifes--;
+          animateHangman(playerLifes);
+          const gameResult = checkLifes(playerLifes, word);
+          gameIsOver = gameResult;
+        } else {
+          const gameResult = checkLifes(playerLifes, word);
+          gameIsOver = gameResult;
+        }
+
+        markUsedLetters(usedLetters);
       }
     });
   }
 }
-
-const handleUserAction = (word, letter, usedLetters, gameStatus) => {
-  if (!letter || gameStatus.gameIsOver || usedLetters.includes(letter)) return;
-  usedLetters.push(letter);
-  let result = checkLetter(letter, word);
-
-  if (result === false) {
-    gameStatus.playerLifes--;
-    animateHangman(gameStatus.playerLifes);
-    const gameResult = checkLifes(gameStatus.playerLifes, word);
-    gameStatus.gameIsOver = gameResult;
-  } else {
-    const gameResult = checkLifes(gameStatus.playerLifes, word);
-    gameStatus.gameIsOver = gameResult;
-  }
-
-  markUsedLetters(usedLetters);
-};
 
 function markUsedLetters(array) {
   const keyboardKeys = document.querySelectorAll('.keyboard__key');
@@ -136,7 +143,7 @@ function updateSecretWord(word) {
   const secretWordContainer = document.querySelector('.secret-word');
   const fragment = new DocumentFragment();
 
-  wordArray.forEach(() => {
+  wordArray.forEach(letter => {
     const newLetter = document.createElement('div');
 
     newLetter.classList.add('secret-word__letter');
