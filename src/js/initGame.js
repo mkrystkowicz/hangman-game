@@ -27,7 +27,6 @@ export default function initGame(object) {
   function listenForEvents() {
     keyboard.addEventListener('click', ({ target }) => {
       const letter = target.getAttribute('value');
-      if (!letter || gameIsOver || usedLetters.includes(letter)) return;
       handleUserAction(word, letter, usedLetters, gameStatus);
     });
 
